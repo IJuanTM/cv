@@ -1,7 +1,9 @@
-***
-
 <div align="center">
 
-#### This website is made using the [Simpl](https://github.com/IJuanTM/Simpl/) framework.
+# CV
+
+#### Een website met mijn curriculum vitae
+
+#### [cv.iwanvanderwal.nl](https://cv.iwanvanderwal.nl/)
 
 </div>
