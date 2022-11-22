@@ -228,6 +228,11 @@ section.home {
       row-gap: 2rem;
       column-gap: 2rem;
 
+      @media print {
+        column-gap: 4rem;
+        margin-bottom: -1rem;
+      }
+
       @media screen and (min-width: $min-md) {
         row-gap: 4rem;
         column-gap: 4rem;
@@ -283,6 +288,7 @@ section.home {
 
           @media print {
             filter: none;
+            width: 12rem;
           }
 
           @media screen and (min-width: $min-sm) {
