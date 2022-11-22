@@ -1,0 +1,41 @@
+$browsers: "-webkit-", "-moz-", "-ms-", "-o-", "";
+
+// @include animation($name $duration $function $delay $count $direction $mode $state);
+@mixin animation($animation...) {
+  @each $browser in $browsers {
+    #{$browser}animation: $animation;
+  }
+}
+
+// @include filter($functions);
+@mixin filter($filter...) {
+  @each $browser in $browsers {
+    #{$browser}filter: $filter;
+  }
+}
+
+// @include transform($functions);
+@mixin transform($transform...) {
+  @each $browser in $browsers {
+    #{$browser}transform: $transform;
+  }
+}
+
+// @include keyframes($name)
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+# Local git files, should stay local ;)
+.git
+
+# For use with PhpStorm or any other Jetbrains IDE.
+.idea
+
+# Local npm files created after running 'npm install'.
+node_modules
+package-lock.json

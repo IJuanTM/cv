@@ -1,0 +1,25 @@
+section.error {
+  row-gap: 2rem;
+  flex-direction: column;
+  height: calc(100vh - 16rem);
+
+  @media screen and (max-width: $max-sm) {
+    height: calc(100vh - 10rem);
+  }
+
+  h1 {
+    color: $red;
+    font-size: 6rem;
+    font-weight: 600;
+  }
+
+  div.col {
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+}

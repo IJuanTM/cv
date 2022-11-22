@@ -1,0 +1,66 @@
+// Config
+$img: '../../dist/img/';
+$svg: $img + 'svg/';
+
+// Font
+$font: "Rubik", sans-serif;
+
+/* Colors */
+
+// Simpl colors
+$simpl-light: #D01018;
+$simpl: #C80810;
+$simpl-dark: #C00008;
+
+// RGB colors
+$red-light: #E83818;
+$red: #E03010;
+$red-dark: #D82808;
+
+$green-light: #18A838;
+$green: #10A030;
+$green-dark: #089828;
+
+$blue-light: #1878E8;
+$blue: #1070E0;
+$blue-dark: #0868D8;
+
+// CMY colors
+$cyan-light: #18A8A8;
+$cyan: #10A0A0;
+$cyan-dark: #089898;
+
+$magenta-light: #A818A8;
+$magenta: #A010A0;
+$magenta-dark: #980898;
+
+$yellow-light: #A8A818;
+$yellow: #A0A010;
+$yellow-dark: #989808;
+
+// Extra colors
+$orange-light: #E8A818;
+$orange: #E0A010;
+$orange-dark: #D89808;
+
+/* Useful @media breakpoints: */
+
+// Small screens
+$min-sm: 576px;
+$max-sm: 575.98px;
+
+// Medium screens
+$min-md: 768px;
+$max-md: 767.98px;
+
+// Large screens
+$min-lg: 992px;
+$max-lg: 991.98px;
+
+// Extra large screens
+$min-xl: 1200px;
+$max-xl: 1199.98px;
+
+// Extra extra large screens
+$min-xxl: 1400px;
+$max-xxl: 1399.98px;

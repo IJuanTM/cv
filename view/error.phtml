@@ -1,0 +1,6 @@
+<?php
+if ($this->urlArr['pageVars'][0] == '403') $this->part(ERROR_403_PAGE);
+else if ($this->urlArr['pageVars'][0] == '404') $this->part(ERROR_404_PAGE);
+else if ($this->urlArr['pageVars'][0] == '500') $this->part(ERROR_500_PAGE);
+else $this->part(ERROR_404_PAGE);
+$this->redirect(2, REDIRECT);

@@ -1,0 +1,43 @@
+*.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*.start-x {
+  display: flex;
+  justify-content: flex-start;
+}
+
+*.center-x {
+  display: flex;
+  justify-content: center;
+
+  > :is(p, h1, h2, h3, h4, h5, h6) {
+    text-align: center;
+  }
+}
+
+*.end-x {
+  display: flex;
+  justify-content: flex-end;
+
+  > :is(p, h1, h2, h3, h4, h5, h6) {
+    text-align: end;
+  }
+}
+
+*.start-y {
+  display: flex;
+  align-items: flex-start;
+}
+
+*.center-y {
+  display: flex;
+  align-items: center;
+}
+
+*.end-y {
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,307 @@
+section.home {
+  display: flex;
+  padding: 0 1rem;
+  flex-direction: column;
+
+  @media print {
+    padding: 0;
+  }
+
+  @media screen and (min-width: $min-sm) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (min-width: $min-md) {
+    padding: 0 4rem;
+  }
+
+  @media screen and (min-width: $min-xl) {
+    padding: 0 12rem;
+  }
+
+  @media screen and (min-width: $min-xxl) {
+    padding: 0 15%;
+  }
+
+  > div.row {
+    column-gap: 4rem;
+
+    @media print {
+      column-gap: 2rem;
+    }
+
+    @media screen and (max-width: $max-lg) {
+      &:not(div.profile-header) {
+        flex-direction: column;
+      }
+    }
+
+    &:not(div.profile-header) {
+      > div.col:not(div.empty) {
+        padding-top: 1rem;
+
+        @media print {
+          padding-top: 2rem;
+        }
+
+        @media screen and (min-width: $min-sm) {
+          padding-top: 2rem;
+        }
+
+        @media screen and (min-width: $min-md) {
+          padding-top: 4rem;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: .25rem;
+    }
+
+    div.text {
+      display: flex;
+      row-gap: .5rem;
+      flex-direction: column;
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    ul.list {
+      margin-left: .5rem;
+
+      @media print {
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+
+      > li {
+        padding-left: 1rem;
+        background-size: .5rem;
+        background-repeat: no-repeat;
+        color: rgb(255 255 255 / .75);
+        background-position: center left;
+        background-image: url($svg + 'blob.svg');
+
+        @media print {
+          padding-left: 0;
+          background-image: none;
+        }
+
+        @media screen and (max-width: $max-sm) {
+          font-size: .875rem;
+        }
+      }
+    }
+
+    div.double-list {
+      display: flex;
+      row-gap: .25rem;
+      flex-direction: column;
+
+      > div.row {
+        column-gap: .5rem;
+
+        @media print {
+          column-gap: 2rem;
+        }
+
+        @media screen and (min-width: $min-sm) {
+          column-gap: 1rem;
+        }
+
+        div[class*="label-"] {
+          color: rgb(255 255 255 / .75);
+        }
+
+        div.label-sm {
+          @media screen and (max-width: $max-sm) {
+            max-width: 8rem !important;
+          }
+        }
+
+        div.label-md {
+          @media screen and (max-width: $max-sm) {
+            max-width: 10rem;
+          }
+        }
+      }
+    }
+
+    div.items {
+      display: flex;
+      row-gap: 1rem;
+      flex-direction: column;
+
+      div.item-head {
+        column-gap: .5rem;
+        color: rgb(255 255 255 / .5);
+
+        @media screen and (min-width: $min-sm) {
+          column-gap: 1rem;
+        }
+
+        div.time {
+          max-width: 8rem;
+          color: rgb(255 255 255 / .75);
+
+          @media screen and (max-width: $max-sm) {
+            max-width: 6rem;
+            font-size: .875rem;
+          }
+        }
+
+        *.hl-red {
+          color: rgb(255 125 125 / .75);
+
+          @media print {
+            color: rgb(155 55 55);
+          }
+        }
+
+        *.hl-white {
+          color: #FFF;
+        }
+
+        *.hl-green {
+          color: rgb(125 255 125 / .75);
+
+          @media print {
+            color: rgb(55 155 55);
+          }
+        }
+
+        *.hl-purple {
+          color: rgb(125 125 255 / .75);
+
+          @media print {
+            color: rgb(55 55 155);
+          }
+        }
+
+        h3 > a {
+          color: rgb(255 255 255 / .75);
+
+          &:hover {
+            color: rgb(255 255 255 / .5);
+          }
+        }
+      }
+    }
+
+    div.bar {
+      column-gap: .5rem;
+
+      div.meter {
+        height: 100%;
+        column-gap: .25rem;
+
+        > div.col {
+          border-radius: .25rem;
+          background-color: rgb(255 255 255 / .25);
+
+          @media print {
+            background-color: rgb(0 0 0 / .5);
+          }
+
+          &.fill {
+            background-color: rgb(255 255 255 / .5);
+
+            @media print {
+              background-color: rgb(0 0 0 / .75);
+            }
+          }
+        }
+      }
+    }
+
+    &.reverse {
+      @media screen and (max-width: $max-lg) {
+        flex-flow: column-reverse;
+        flex-direction: column-reverse !important;
+      }
+    }
+
+    &.profile-header {
+      row-gap: 2rem;
+      column-gap: 2rem;
+
+      @media screen and (min-width: $min-md) {
+        row-gap: 4rem;
+        column-gap: 4rem;
+      }
+
+      @media screen and (min-width: $min-lg) {
+        column-gap: 8rem;
+      }
+
+      @media screen and (min-width: $min-xl) {
+        column-gap: 10rem;
+      }
+
+      div.name {
+        flex-direction: column;
+
+        p {
+          font-size: 1.125rem;
+          color: rgb(255 255 255 / .75);
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        @media screen and (min-width: $min-sm) {
+          p {
+            font-size: 1.25rem;
+          }
+
+          h1 {
+            font-size: 3rem;
+          }
+        }
+
+        @media screen and (min-width: $min-lg) {
+          p {
+            font-size: 1.5rem;
+          }
+
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      div.image {
+        display: flex;
+
+        > svg {
+          width: 16rem;
+          filter: drop-shadow(0 0 .25rem rgb(0 0 0 / .25));
+
+          @media print {
+            filter: none;
+          }
+
+          @media screen and (min-width: $min-sm) {
+            width: 18rem;
+          }
+
+          @media screen and (min-width: $min-md) {
+            width: 20rem;
+          }
+
+          @media screen and (min-width: $min-lg) {
+            width: 24rem;
+          }
+        }
+      }
+    }
+  }
+
+  *.hide {
+    filter: blur(.25rem);
+  }
+}

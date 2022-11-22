@@ -1,0 +1,104 @@
+@media print {
+  *.no-print {
+    display: none;
+  }
+
+  *:not(:is(*.hl-red, *.hl-green, *.hl-purple)) {
+    color: #000 !important;
+  }
+}
+
+html {
+  line-height: 1.25;
+  scroll-behavior: smooth;
+
+  @media print {
+    font-size: .875rem;
+  }
+}
+
+body {
+  color: #FFF;
+  font-family: $font;
+  position: relative;
+  background-image: linear-gradient(to top, #09203F 0%, #537895 100%);
+
+  @media print {
+    background-image: none;
+  }
+}
+
+noscript {
+  color: #F00;
+  display: block;
+  font-size: 1rem;
+  padding: 1rem 0;
+  line-height: 2rem;
+  text-align: center;
+  font-family: monospace;
+  background-color: #000;
+
+  @media screen and (min-width: $min-lg) {
+    font-size: 1.25rem;
+  }
+}
+
+div.blob-top, div.blob-middle, div.blob-bottom {
+  z-index: -1;
+  position: fixed;
+  pointer-events: none;
+
+  @media print {
+    display: none;
+  }
+
+  > svg {
+    filter: drop-shadow(0 0 .25rem rgb(0 0 0 / .25));
+  }
+}
+
+div.blob-top {
+  top: -30vmin;
+  left: -20vmin;
+  width: 70vmin;
+}
+
+div.blob-middle {
+  top: 5vmin;
+  width: 50vmin;
+  right: -20vmin;
+}
+
+div.blob-bottom {
+  right: 30vmin;
+  width: 100vmin;
+  bottom: -40vmin;
+}
+
+div.print, div.to-top {
+  bottom: 1rem;
+  position: fixed;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(255 255 255 / .25);
+
+  @media print {
+    display: none;
+  }
+
+  &:hover {
+    color: rgb(255 255 255 / .75);
+  }
+}
+
+div.print {
+  left: 1rem;
+}
+
+div.to-top {
+  right: 1rem;
+
+  @media screen and (max-width: $max-sm) {
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cv",
+  "description": "Een website met mijn curriculum vitae",
+  "version": "1.0.0",
+  "devDependencies": {
+    "npm": "^9.1.2",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "sass": "^1.56.1",
+    "terser": "^5.15.1",
+    "browser-sync": "^2.27.10"
+  },
+  "watch": {
+    "build:js": "js/*.js"
+  },
+  "scripts": {
+    "postinstall": "run-p build:sass build:js",
+    "dev": "run-p watch live-reload",
+    "build": "run-s build:*",
+    "build:sass": "sass -s compressed --no-source-map scss/main.scss dist/css/main.min.css",
+    "build:js": "terser js/*.js -o dist/js/main.min.js -c -m",
+    "watch": "run-p watch:*",
+    "watch:sass": "sass -w --update -s compressed --no-source-map scss/main.scss dist/css/main.min.css",
+    "watch:js": "npm-watch build:js",
+    "live-reload": "browser-sync start -p http://local.cv.net/ -f dist/** page/** view/** --no-online --no-notify --no-ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IJuanTM/cv/"
+  },
+  "keywords": [
+    "cv",
+    "curriculum vitae"
+  ],
+  "author": "Iwan van der Wal",
+  "homepage": "https://cv.iwanvanderwal.nl/"
+}

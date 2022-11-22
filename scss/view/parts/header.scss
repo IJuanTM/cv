@@ -1,0 +1,124 @@
+header {
+  z-index: 1;
+  height: 6rem;
+  display: flex;
+  position: relative;
+
+  @media print {
+    display: none;
+  }
+
+  @media screen and (min-width: $min-sm) {
+    height: 8rem;
+  }
+
+  @media screen and (min-width: $min-md) {
+    padding: 0 2rem;
+  }
+
+  nav, div.nav-list {
+    flex: 1;
+    display: flex;
+  }
+
+  *.nav-title, *.nav-item {
+    padding: 0 1rem;
+    text-decoration: none;
+
+    &.nav-link:hover, &.nav-link:focus {
+      text-decoration: underline;
+      color: rgb(255 255 255 / .75);
+    }
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  *.nav-title {
+    z-index: 2;
+    font-size: 1.5rem;
+
+    @media screen and (max-width: $max-md) {
+      padding-left: 3rem;
+    }
+
+    @media screen and (max-width: $max-sm) {
+      padding-left: 2rem;
+    }
+
+    + *.nav-logo {
+      padding-left: 0;
+    }
+  }
+
+  button.hamburger {
+    right: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+
+    > span {
+      width: 6rem;
+      height: 6rem;
+
+      @media screen and (min-width: $min-sm) {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      > span, > span::before, > span::after {
+        width: 2rem;
+        height: .25rem;
+        background-color: #FFF !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $max-md) {
+    nav {
+      top: -24rem;
+      width: 100%;
+      height: 22rem;
+      position: absolute;
+      flex-direction: column;
+      transition: top .15s ease-out;
+      background-color: rgb(205 205 205 / .25);
+
+      @media screen and (min-width: $min-sm) {
+        top: -32rem;
+        height: 32rem;
+      }
+
+      &.extended {
+        top: 0;
+        transition: top .15s ease-out;
+        backdrop-filter: blur(.25rem);
+        box-shadow: 0 0 .25rem 0 rgb(0 0 0 / .25);
+      }
+
+      div.nav-list {
+        margin-top: 6rem;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (min-width: $min-sm) {
+          margin-top: 8rem;
+        }
+
+        a.nav-item {
+          height: 4rem;
+
+          @media screen and (min-width: $min-sm) {
+            height: 6rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    button.hamburger {
+      display: flex;
+    }
+  }
+}
