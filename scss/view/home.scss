@@ -73,17 +73,14 @@ section.home {
       margin-left: .5rem;
 
       @media print {
-        margin-left: 1.5rem;
+        margin-left: 1.75rem;
         list-style-type: disc;
       }
 
       > li {
-        padding-left: 1rem;
-        background-size: .5rem;
-        background-repeat: no-repeat;
+        position: relative;
+        padding-left: 1.5rem;
         color: rgb(255 255 255 / .75);
-        background-position: center left;
-        background-image: url($svg + 'blob.svg');
 
         @media print {
           padding-left: 0;
@@ -92,6 +89,21 @@ section.home {
 
         @media screen and (max-width: $max-sm) {
           font-size: .875rem;
+        }
+
+        &::before {
+          content: '';
+          left: .25rem;
+          width: .5rem;
+          height: 1rem;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-image: url($svg + 'blob.svg');
+
+          @media print {
+            display: none;
+          }
         }
       }
     }
