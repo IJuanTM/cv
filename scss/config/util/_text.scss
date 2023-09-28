@@ -1,0 +1,21 @@
+a {
+  text-decoration: underline;
+
+  &:hover, &:focus {
+    color: rgba(#FFF, .75);
+  }
+}
+
+:is(a, button):focus-visible {
+  box-shadow: inset 0 0 0 .125rem #FFF;
+}
+
+// ---------------------------------------------------------------- //
+
+*.text-center {
+  text-align: center;
+}
+
+*.text-end {
+  text-align: end;
+}

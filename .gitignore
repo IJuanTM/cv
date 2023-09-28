@@ -1,0 +1,17 @@
+# IDE files
+.idea
+.vscode
+
+# Package manager files
+vendor
+node_modules
+
+# Compiled files
+public/css/main.min.css
+public/js/main.min.js
+
+# Environment variables
+.env
+
+# Logs
+app/Logs

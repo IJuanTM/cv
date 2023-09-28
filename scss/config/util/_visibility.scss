@@ -1,0 +1,12 @@
+*.hidden {
+  display: none;
+}
+
+*.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+*[inert] {
+  color: rgba(#000, .25);
+}

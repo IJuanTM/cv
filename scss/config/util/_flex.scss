@@ -1,0 +1,116 @@
+*.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  > *.col {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+// ---------------------------------------------------------------- //
+
+*.f-0 {
+  flex: 0 1 auto !important;
+  max-width: none !important;
+}
+
+*.f-g {
+  flex-grow: 1;
+}
+
+*.f-s {
+  flex-shrink: 1;
+}
+
+// ---------------------------------------------------------------- //
+
+*.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*.start-x {
+  display: flex;
+  justify-content: flex-start;
+}
+
+*.center-x {
+  display: flex;
+  justify-content: center;
+
+  > :is(small, p, h1, h2, h3, h4, h5, h6, a) {
+    text-align: center;
+  }
+}
+
+*.end-x {
+  display: flex;
+  justify-content: flex-end;
+
+  > :is(small, p, h1, h2, h3, h4, h5, h6, a) {
+    text-align: end;
+  }
+}
+
+*.between-x {
+  display: flex;
+  justify-content: space-between;
+}
+
+*.around-x {
+  display: flex;
+  justify-content: space-around;
+}
+
+*.start-y {
+  display: flex;
+  align-items: flex-start;
+}
+
+*.center-y {
+  display: flex;
+  align-items: center;
+}
+
+*.end-y {
+  display: flex;
+  align-items: flex-end;
+}
+
+*.between-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+*.around-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+// ---------------------------------------------------------------- //
+
+*.f-row {
+  display: flex;
+  flex-direction: row;
+}
+
+*.f-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// ---------------------------------------------------------------- //
+
+*.f-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+*.f-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}

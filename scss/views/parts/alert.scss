@@ -1,0 +1,39 @@
+div.alert {
+  color: #FFF;
+  display: flex;
+  padding: 1rem;
+  box-shadow: 0 0 .25rem rgba(#000, .25);
+  transition: visibility .15s, opacity .15s;
+
+  &.global {
+    left: 0;
+    z-index: 4;
+    bottom: 2rem;
+    margin: 1rem;
+    position: fixed;
+
+    @include breakpoint-down(sm) {
+      width: calc(100% - 2rem);
+    }
+
+    @include breakpoint-up(sm) {
+      max-width: 28rem;
+    }
+  }
+
+  &.success {
+    background-color: $green;
+  }
+
+  &.warning {
+    background-color: $orange;
+  }
+
+  &.error {
+    background-color: $red;
+  }
+
+  &.info {
+    background-color: $cyan;
+  }
+}

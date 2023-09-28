@@ -1,0 +1,30 @@
+<!-- This website is made using the Simpl framework. You can read more about Simpl here: https://www.github.com/IJuanTM/simpl -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <!-- Title -->
+  <title><?= APP_NAME . ' - Iwan van der Wal' ?></title>
+
+  <!-- Base -->
+  <base href="<?= BASE_URL ?>">
+
+  <!-- Meta and links -->
+  <?php
+  $this->part('index/meta');
+  $this->part('index/preload');
+  $this->part('index/css');
+  $this->part('index/favicon');
+  ?>
+</head>
+
+<body>
+<!-- Noscript -->
+<noscript class="center h-100 w-100">
+  <p class="text-center">Deze gebruikt JavaScript. Zet JavaScript aan om deze website te kunnen bekijken.</p>
+</noscript>
+
+<!-- Header -->
+<?php $this->part('header') ?>
+
+<!-- Content -->
+<main class="content">

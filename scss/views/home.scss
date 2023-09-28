@@ -1,0 +1,325 @@
+section.home {
+  display: flex;
+  padding: 0 1rem;
+  flex-direction: column;
+
+  @media print {
+    padding: 0 !important;
+  }
+
+  @include breakpoint-up(sm) {
+    padding: 0 2rem;
+  }
+
+  @include breakpoint-up(md) {
+    padding: 0 4rem;
+  }
+
+  @include breakpoint-up(xl) {
+    padding: 0 12rem;
+  }
+
+  @include breakpoint-up(xxl) {
+    padding: 0 15%;
+  }
+
+  > div.row {
+    column-gap: 4rem;
+
+    @media print {
+      column-gap: 2rem !important;
+
+      &:not(div.profile-header) {
+        flex-direction: row !important;
+      }
+    }
+
+    @include breakpoint-down(lg) {
+      &:not(div.profile-header) {
+        flex-direction: column;
+      }
+    }
+
+    &:not(div.profile-header) {
+      > div.col:not(div.empty) {
+        padding-top: 1rem;
+
+        @media print {
+          padding-top: 2rem !important;
+        }
+
+        @include breakpoint-up(sm) {
+          padding-top: 2rem;
+        }
+
+        @include breakpoint-up(md) {
+          padding-top: 4rem;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: .25rem;
+    }
+
+    div.text {
+      display: flex;
+      row-gap: .5rem;
+      flex-direction: column;
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    ul.list {
+      margin-left: .5rem;
+
+      @media print {
+        margin-left: 1.75rem !important;
+        list-style-type: disc !important;
+      }
+
+      > li {
+        position: relative;
+        padding-left: 1.5rem;
+        color: rgba(#FFF, .75);
+
+        @media print {
+          padding-left: 0 !important;
+          background-image: none !important;
+        }
+
+        @include breakpoint-down(sm) {
+          font-size: .875rem;
+        }
+
+        &::before {
+          content: '';
+          left: .25rem;
+          width: .5rem;
+          height: 1rem;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-position-y: center;
+          background-image: url('../img/svg/blob.svg');
+
+          @media print {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    div.double-list {
+      display: flex;
+      row-gap: .25rem;
+      flex-direction: column;
+
+      > div.row {
+        column-gap: .5rem;
+
+        @media print {
+          column-gap: 2rem !important;
+        }
+
+        @include breakpoint-up(sm) {
+          column-gap: 1rem;
+        }
+
+        div[class*="label-"] {
+          color: rgba(#FFF, .75);
+        }
+
+        div.label-sm {
+          @include breakpoint-down(sm) {
+            max-width: 8rem !important;
+          }
+        }
+
+        div.label-md {
+          @include breakpoint-down(sm) {
+            max-width: 10rem;
+          }
+        }
+      }
+    }
+
+    div.items {
+      display: flex;
+      row-gap: 1rem;
+      flex-direction: column;
+
+      div.item-head {
+        column-gap: .5rem;
+        color: rgba(#FFF, .5);
+
+        @include breakpoint-up(sm) {
+          column-gap: 1rem;
+        }
+
+        div.time {
+          max-width: 8rem;
+          color: rgba(#FFF, .75);
+
+          @include breakpoint-down(sm) {
+            max-width: 6rem;
+            font-size: .875rem;
+          }
+        }
+
+        *.hl-red {
+          color: rgb(255 125 125 / .75);
+
+          @media print {
+            color: rgb(155 55 55) !important;
+          }
+        }
+
+        *.hl-white {
+          color: #FFF;
+        }
+
+        *.hl-green {
+          color: rgb(125 255 125 / .75);
+
+          @media print {
+            color: rgb(55 155 55) !important;
+          }
+        }
+
+        *.hl-purple {
+          color: rgb(125 125 255 / .75);
+
+          @media print {
+            color: rgb(55 55 155) !important;
+          }
+        }
+
+        h3 > a {
+          color: rgba(#FFF, .75);
+
+          &:hover {
+            color: rgba(#FFF, .5);
+          }
+        }
+      }
+    }
+
+    div.bar {
+      column-gap: .5rem;
+
+      div.meter {
+        height: 100%;
+        column-gap: .25rem;
+
+        > div.col {
+          border-radius: .25rem;
+          background-color: rgba(#FFF, .25);
+
+          @media print {
+            background-color: rgba(#000, .5) !important;
+          }
+
+          &.fill {
+            background-color: rgba(#FFF, .5);
+
+            @media print {
+              background-color: rgba(#000, .75) !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.reverse {
+      @include breakpoint-down(lg) {
+        flex-flow: column-reverse !important;
+        flex-direction: column-reverse !important;
+      }
+    }
+
+    &.profile-header {
+      row-gap: 2rem;
+      column-gap: 2rem;
+
+      @media print {
+        column-gap: 4rem !important;
+        margin-bottom: -1rem !important;
+      }
+
+      @include breakpoint-up(md) {
+        row-gap: 4rem;
+        column-gap: 4rem;
+      }
+
+      @include breakpoint-up(lg) {
+        column-gap: 8rem;
+      }
+
+      @include breakpoint-up(xl) {
+        column-gap: 10rem;
+      }
+
+      div.name {
+        flex-direction: column;
+
+        p {
+          font-size: 1.125rem;
+          color: rgba(#FFF, .75);
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        @include breakpoint-up(sm) {
+          p {
+            font-size: 1.25rem;
+          }
+
+          h1 {
+            font-size: 3rem;
+          }
+        }
+
+        @include breakpoint-up(lg) {
+          p {
+            font-size: 1.5rem;
+          }
+
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      div.image {
+        display: flex;
+
+        > svg {
+          width: 16rem;
+          filter: drop-shadow(0 0 .25rem rgba(#000, .25));
+
+          @media print {
+            width: 14rem !important;
+            filter: none !important;
+          }
+
+          @include breakpoint-up(sm) {
+            width: 18rem;
+          }
+
+          @include breakpoint-up(md) {
+            width: 20rem;
+          }
+
+          @include breakpoint-up(lg) {
+            width: 24rem;
+          }
+        }
+      }
+    }
+  }
+}

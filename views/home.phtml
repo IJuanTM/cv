@@ -1,0 +1,759 @@
+<?php use app\Controllers\AppController; ?>
+
+<section class="home">
+  <div class="row profile-header center-x">
+    <div class="col name f-0 center-x">
+      <div class="row">
+        <div class="col">
+          <h1>Iwan van der Wal</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>Junior software engineer</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col image f-0" aria-label="Profiel foto van Iwan van der Wal">
+      <?= AppController::svg('pf') ?>
+    </div>
+  </div>
+
+  <div class="row reverse">
+    <div class="col no-print">
+      <div class="row">
+        <div class="col">
+          <h2>Wie ben ik</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col text">
+          <p>Mijn naam is Iwan, ik ben <?= date_diff(date_create('20011025'), date_create(date('Ymd')))->format('%y') ?> jaar en kom uit Utrecht.</p>
+
+          <p>Al mijn hele leven heb ik een passie gehad voor computers, dit is ook de reden dat ik nu software engineering studeer op de Haagse Hogeschool. Hier heb ik al veel geleerd, het meest interessant vond ik de webdevelopment vakken. Hier voor heb ik ook al een Mbo-studie gedaan in de richting van web development, en daar heb ik een goede basis opgebouwd. Later wil ik graag mijzelf verder ontwikkelen met web development, het liefst als full-stack programmeur.</p>
+
+          <p>Verder ben ik erg gestructureerd en zorgvuldig als ik werk, dit vind ik fijn voor mijzelf, maar ook belangrijk om overzicht te behouden. Mijn beste vaardigheden zitten momenteel in het maken van de front-end van een website met behulp van SCSS en JavaScript, maar natuurlijk ook met CSS en HTML. Maar hiernaast heb ik ook al wat ervaring met PHP, C# (.NET), Java en Python voor het maken van de back-end. Ook heb ik ervaring met het werken met databases, zoals MySQL en SQLite.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" id="personalia">
+      <div class="row">
+        <div class="col">
+          <h2>Personalia</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col double-list">
+          <div class="row">
+            <div class="col label-md">Naam</div>
+            <div class="col">Iwan van der Wal</div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">Geboortedatum</div>
+            <div class="col">25 oktober 2001</div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">Nationaliteit</div>
+            <div class="col">Nederlandse</div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">E-mailadres</div>
+            <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">LinkedIn</div>
+            <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal/" target="_blank">iwanvanderwal</a></div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">Website</div>
+            <div class="col"><a href="https://www.iwanvanderwal.nl/" target="_blank">www.iwanvanderwal.nl</a></div>
+          </div>
+
+          <div class="row">
+            <div class="col label-md">GitHub</div>
+            <div class="col"><a href="https://github.com/IJuanTM/" target="_blank">IJuanTM</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row single-row">
+    <div class="col empty"></div>
+
+    <div class="col no-print">
+      <div class="row">
+        <div class="col">
+          <h2>Talen</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col double-list">
+          <div class="row">
+            <div class="col label-sm">Nederlands</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">Engels</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">5</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">Duits</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col" id="opleidingen">
+      <div class="row">
+        <div class="col">
+          <h2>Opleidingen</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col items">
+          <div class="row item-head">
+            <div class="col time">2020 - heden</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">P</span> / <span class="hl-white">HBO-ICT</span> / <span class="hl-green">Software engineering</span></h3>
+
+                  <h3 class="hl-purple">De Haagse Hogeschool</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>4-jarige bachelor opleiding</li>
+                    <li>Propedeuse direct behaald</li>
+                    <li>Als minor gekozen voor Software Reversing and Exploitation</li>
+                    <li>Favoriete vak: WPFW - Webprogramming, Frameworks & Usability, leren werken met C# en .NET en met accessibility</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2019 - 2020</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">MBO-4</span> / <span class="hl-white">Applicatie- en mediaontwikkelaar</span> / <span class="hl-green">Webdevelopment</span></h3>
+
+                  <h3 class="hl-purple">MBO Utrecht</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>Versneld afgerond in 1,5 jaar</li>
+                    <li>Favoriete vak: Programming, leren werken met HTML, CSS en PHP</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2013 - 2018</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">HAVO</span> / <span class="hl-green">Natuur en Gezondheid</span></h3>
+
+                  <h3 class="hl-purple">Leidsche Rijn College</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>Informatica als keuzevak</li>
+                    <li>Favoriete vakken: Informatica en Engels</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" id="werkervaring">
+      <div class="row">
+        <div class="col">
+          <h2>Werkervaring</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col items">
+          <div class="row item-head">
+            <div class="col time">2023 - heden</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">Full stack developer</span> / <span class="hl-green">Ecoteers</span></h3>
+
+                  <h3 class="hl-purple">Utrecht</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>Verder ontwikkelen van het systeem uit de stage opdracht</li>
+                    <li>Het beheren van het systeem en de database</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2023</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">Stagair</span> / <span class="hl-green">Ecoteers</span></h3>
+
+                  <h3 class="hl-purple">Utrecht</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>22 weken stage voor mijn HBO opleiding in het 3e jaar</li>
+                    <li>Maken van een intern project/ticket management systeem</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head no-print">
+            <div class="col time">2021 - 2023</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">Shopper</span> / <span class="hl-green">PicNic</span></h3>
+
+                  <h3 class="hl-purple">FC1/DC4 Utrecht</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>Pakken van bestellingen voor klanten</li>
+                    <li>Rolcontainers met producten vullen voor andere PicNic locaties</li>
+                    <li>In- en uitladen van vrachtwagens</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head no-print">
+            <div class="col time">2019 - 2021</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">Computer support</span> / <span class="hl-green">MediaMarkt</span></h3>
+
+                  <h3 class="hl-purple">MediaMarkt Hoog Catharijne</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>Klanten helpen met smartphone en computer problemen</li>
+                    <li>Repareren van smartphone schermen</li>
+                    <li>Producten leveren aan klanten tijdens corona-periode</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2020</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-red">Stagair</span> / <span class="hl-green">Clearsite</span></h3>
+
+                  <h3 class="hl-purple">Nieuwegein</h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ul class="list">
+                    <li>4 maanden afstudeer stage voor mijn MBO-4 opleiding</li>
+                    <li>Project gemaakt voor stagebedrijf</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col no-print">
+      <div class="row">
+        <div class="col">
+          <h2>Programmeer ervaring</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col double-list">
+          <div class="row">
+            <div class="col label-sm">HTML</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">CSS / SCSS</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">JavaScript</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">PHP</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">C# (.NET)</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">Java</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">Python</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">C</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col label-sm">Assembly (x86)</div>
+
+            <div class="col">
+              <div class="row bar">
+                <div class="col f-0">0</div>
+
+                <div class="col">
+                  <div class="row meter">
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col fill"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                  </div>
+                </div>
+
+                <div class="col f-0">10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col no-print" id="projecten">
+      <div class="row">
+        <div class="col">
+          <h2>Projecten</h2>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col items">
+          <div class="row item-head">
+            <div class="col time">2021 - heden</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">Portfolio website</span> / <a href="https://www.iwanvanderwal.nl/" target="_blank">Website</a></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Mijn eigen portfolio-website waar ik mijn projecten op kan plaatsen. Nog steeds bezig met aanvullen en verbeteren.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2020 - heden</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">Simpl</span> / <a href="https://simpl.iwanvanderwal.nl/" target="_blank">Website</a> / <a href="https://github.com/IJuanTM/simpl/" target="_blank">GitHub</a></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Een PHP, HTML, CSS, JavaScript en Sass framework. Begonnen als een handige template om snel te beginnen aan een nieuwe website, daarna verder uitgebreid met meer functies. Nog steeds bezig met aanvullen en verbeteren.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
+            <div class="col time">2022</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">ZMDH zorgkliniek website</span> / <a href="https://github.com/aycan-acn/Care-Clinic-ZMDH/" target="_blank">GitHub</a></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Een website voor een zorgkliniek met een live chatsysteem. Gemaakt met C#, met behulp van .NET en SignalR. Gemaakt voor een school project, afgerond met een <span class="hl-red">9,2</span>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row item-head">
+            <div class="col time">2021</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">ETWS dashboard website</span></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Een dashboard voor het bekijken van opgewekte energie door een slim grijs-water opwek systeem. Gemaakt voor een school project, samen met een api en database, afgrond met een <span class="hl-red">7,8</span>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row item-head">
+            <div class="col time">2020</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">Clearsite dashboard</span></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Een dashboard voor stagebedrijf Clearsite, bedoeld om lopende projecten en de status van verschillende websites en servers te laten zien. Bedoeld voor een groot scherm in de wachtruimte van het kantoor. Gemaakt voor een school project.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

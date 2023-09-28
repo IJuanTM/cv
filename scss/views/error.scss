@@ -1,0 +1,13 @@
+section.error {
+  row-gap: 2rem;
+
+  h1 {
+    color: $red;
+    font-size: 6rem;
+    font-weight: 600;
+  }
+
+  div.col {
+    row-gap: 1rem;
+  }
+}

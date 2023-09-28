@@ -1,0 +1,38 @@
+<section class="error h-100-content f-col center-x">
+  <?php
+  $message = '';
+
+  // Get the error code from the url
+  $code = $this->getUrl()['subpages'][0] ?? '404';
+
+  // Set the error message
+  if ($code == '403') $message = 'Je hebt geen toegang tot deze pagina.';
+  else if ($code == '500') $message = 'Een interne fout is opgetreden.';
+  else $message = 'Deze pagina bestaat niet.';
+
+  // Redirect to the homepage if auto redirect is enabled
+  if (ERROR_AUTO_REDIRECT) $this->redirect(REDIRECT, 2);
+  ?>
+
+  <div class="row">
+    <div class="col center-x">
+      <h1><?= $code ?></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col f-col">
+      <div class="row">
+        <div class="col center-x">
+          <h3><?= $message ?></h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col center-x">
+          <p>Je wordt doorgestuurd naar de <a href="<?= $this->url(REDIRECT) ?>" aria-label="Link naar <?= REDIRECT ?> pagina"><?= REDIRECT ?></a> pagina.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

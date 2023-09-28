@@ -1,0 +1,14 @@
+// CONFIG (load first)
+@import "config/config";
+
+// STYLE
+@import "style";
+
+// VIEWS
+@import "views/error";
+@import "views/home";
+
+// PARTS
+@import "views/parts/alert";
+@import "views/parts/content";
+@import "views/parts/header";

@@ -1,0 +1,124 @@
+@media print {
+  *.no-print {
+    display: none;
+  }
+
+  *:not(:is(*.hl-red, *.hl-green, *.hl-purple)) {
+    color: #000 !important;
+  }
+}
+
+html {
+  line-height: 1.25;
+  scroll-behavior: smooth;
+
+  @media print {
+    font-size: .875rem;
+  }
+}
+
+body {
+  color: #FFF;
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  background-image: linear-gradient(to top, #09203F 0%, #537895 100%);
+
+  @media print {
+    background-image: none;
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+noscript {
+  left: 0;
+  z-index: 5;
+  color: $red;
+  padding: 2rem;
+  position: fixed;
+  font-size: 1.25rem;
+  background-color: $light-1;
+
+  @include breakpoint-up(lg) {
+    font-size: 1.5rem;
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+hr {
+  height: .125rem;
+  margin-bottom: .5rem;
+  background-color: rgba(#FFF, .25);
+
+  &.vertical {
+    height: 100%;
+    width: .125rem;
+  }
+
+  &.dimmed {
+    background-color: rgba(#000, .25);
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+div.blob-top, div.blob-middle, div.blob-bottom {
+  z-index: -1;
+  position: fixed;
+  pointer-events: none;
+
+  @media print {
+    display: none;
+  }
+
+  > svg {
+    filter: drop-shadow(0 0 .25rem rgba(#000, .25));
+  }
+}
+
+div.blob-top {
+  top: -30vmin;
+  left: -20vmin;
+  width: 70vmin;
+}
+
+div.blob-middle {
+  top: 5vmin;
+  width: 50vmin;
+  right: -20vmin;
+}
+
+div.blob-bottom {
+  right: 30vmin;
+  width: 100vmin;
+  bottom: -40vmin;
+}
+
+div.print, div.to-top {
+  bottom: 1rem;
+  position: fixed;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgba(#FFF, .25);
+
+  @media print {
+    display: none;
+  }
+
+  &:hover {
+    color: rgba(#FFF, .75);
+  }
+}
+
+div.print {
+  left: 1rem;
+}
+
+div.to-top {
+  right: 1rem;
+
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+}

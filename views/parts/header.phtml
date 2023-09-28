@@ -1,0 +1,26 @@
+<header>
+  <div class="row navbar">
+    <div class="col nav-title center f-0">
+      <h6><?= APP_NAME ?></h6>
+    </div>
+
+    <nav class="col menu end-x">
+      <div class="row nav-list w-auto f-0">
+        <a class="col nav-item center f-0" href="<?= $this->url('home#personalia') ?>" aria-label="Link naar personalia sectie">Personalia</a>
+        <a class="col nav-item center f-0" href="<?= $this->url('home#opleidingen') ?>" aria-label="Link naar opleidingen sectie">Opleidingen</a>
+        <a class="col nav-item center f-0" href="<?= $this->url('home#werkervaring') ?>" aria-label="Link naar werkervaring sectie">Werkervaring</a>
+        <a class="col nav-item center f-0" href="<?= $this->url('home#projecten') ?>" aria-label="Link naar projecten sectie">Projecten</a>
+      </div>
+    </nav>
+
+    <div class="col nav-options">
+      <div class="row end-x h-100">
+        <button class="col hamburger hamburger--squeeze f-0" type="button" aria-label="Open navigatie menu" aria-controls="navigation" aria-expanded="false" tabindex="1">
+          <span class="hamburger-box center">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
