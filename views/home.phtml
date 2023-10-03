@@ -35,7 +35,7 @@
         <div class="col text">
           <p>Mijn naam is Iwan, ik ben <?= date_diff(date_create('20011025'), date_create(date('Ymd')))->format('%y') ?> jaar en kom uit Utrecht.</p>
 
-          <p>Al mijn hele leven heb ik een passie gehad voor computers, dit is ook de reden dat ik nu software engineering studeer op de Haagse Hogeschool. Hier heb ik al veel geleerd, het meest interessant vond ik de webdevelopment vakken. Hier voor heb ik ook al een Mbo-studie gedaan in de richting van web development, en daar heb ik een goede basis opgebouwd. Later wil ik graag mijzelf verder ontwikkelen met web development, het liefst als full-stack programmeur.</p>
+          <p>Al mijn hele leven heb ik een passie gehad voor computers, dit is ook de reden dat ik nu software engineering studeer op de Haagse Hogeschool. Hier heb ik al veel geleerd, het meest interessant vond ik de webdevelopment vakken. Hiervoor heb ik ook al een Mbo-studie gedaan in de richting van web development, en daar heb ik een goede basis opgebouwd. Later wil ik graag mijzelf verder ontwikkelen met web development, het liefst als full-stack programmeur.</p>
 
           <p>Verder ben ik erg gestructureerd en zorgvuldig als ik werk, dit vind ik fijn voor mijzelf, maar ook belangrijk om overzicht te behouden. Mijn beste vaardigheden zitten momenteel in het maken van de front-end van een website met behulp van SCSS en JavaScript, maar natuurlijk ook met CSS en HTML. Maar hiernaast heb ik ook al wat ervaring met PHP, C# (.NET), Java en Python voor het maken van de back-end. Ook heb ik ervaring met het werken met databases, zoals MySQL en SQLite.</p>
         </div>
@@ -52,40 +52,50 @@
       <hr>
 
       <div class="row">
-        <div class="col double-list">
+        <div class="col double-column">
           <div class="row">
-            <div class="col label-md">Naam</div>
-            <div class="col">Iwan van der Wal</div>
+            <div class="col double-list">
+              <div class="row">
+                <div class="col label-md">Naam</div>
+                <div class="col">Iwan van der Wal</div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">Geboortedatum</div>
+                <div class="col">25 oktober 2001</div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">Nationaliteit</div>
+                <div class="col">Nederlandse</div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">E-mailadres</div>
+                <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">LinkedIn</div>
+                <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal/" target="_blank">iwanvanderwal</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">Website</div>
+                <div class="col"><a href="https://www.iwanvanderwal.nl/" target="_blank">www.iwanvanderwal.nl</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">GitHub</div>
+                <div class="col"><a href="https://github.com/IJuanTM/" target="_blank">IJuanTM</a></div>
+              </div>
+            </div>
           </div>
 
-          <div class="row">
-            <div class="col label-md">Geboortedatum</div>
-            <div class="col">25 oktober 2001</div>
-          </div>
-
-          <div class="row">
-            <div class="col label-md">Nationaliteit</div>
-            <div class="col">Nederlandse</div>
-          </div>
-
-          <div class="row">
-            <div class="col label-md">E-mailadres</div>
-            <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>
-          </div>
-
-          <div class="row">
-            <div class="col label-md">LinkedIn</div>
-            <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal/" target="_blank">iwanvanderwal</a></div>
-          </div>
-
-          <div class="row">
-            <div class="col label-md">Website</div>
-            <div class="col"><a href="https://www.iwanvanderwal.nl/" target="_blank">www.iwanvanderwal.nl</a></div>
-          </div>
-
-          <div class="row">
-            <div class="col label-md">GitHub</div>
-            <div class="col"><a href="https://github.com/IJuanTM/" target="_blank">IJuanTM</a></div>
+          <div class="row no-print">
+            <div class="col">
+              <p><strong>Ik kom graag verder in contact met u! U kunt mij bereiken via mijn e-mailadres of LinkedIn. U kunt ook dit CV uitprinten via de knop linksonder aan de pagina.</strong></p>
+            </div>
           </div>
         </div>
       </div>
@@ -312,14 +322,14 @@
                 <div class="col">
                   <ul class="list">
                     <li>22 weken stage voor mijn HBO opleiding in het 3e jaar</li>
-                    <li>Maken van een intern project/ticket management systeem</li>
+                    <li>Maken van een intern ticket/project management systeem</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row item-head no-print">
+          <div class="row item-head">
             <div class="col time">2021 - 2023</div>
 
             <div class="col">
@@ -666,6 +676,24 @@
       <div class="row">
         <div class="col items">
           <div class="row item-head">
+            <div class="col time">2022 - heden</div>
+
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <h3><span class="hl-purple">Ecoteers systeem</span></h3>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <p class="text hl-white">Een ticket/project management systeem voor het bedrijf Ecoteers. Gemaakt met behulp van Laravel, MySQL, HTML, CSS, JavaScript en Sass. Momenteel nog in ontwikkeling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row item-head">
             <div class="col time">2021 - heden</div>
 
             <div class="col">
@@ -718,6 +746,7 @@
               </div>
             </div>
           </div>
+
           <div class="row item-head">
             <div class="col time">2021</div>
 
@@ -735,6 +764,7 @@
               </div>
             </div>
           </div>
+
           <div class="row item-head">
             <div class="col time">2020</div>
 
@@ -747,7 +777,7 @@
 
               <div class="row">
                 <div class="col">
-                  <p class="text hl-white">Een dashboard voor stagebedrijf Clearsite, bedoeld om lopende projecten en de status van verschillende websites en servers te laten zien. Bedoeld voor een groot scherm in de wachtruimte van het kantoor. Gemaakt voor een school project.</p>
+                  <p class="text hl-white">Een dashboard voor stagebedrijf Clearsite, bedoeld om lopende projecten en de status van verschillende websites en servers te laten zien. Bedoeld voor een groot scherm in de wachtruimte van het kantoor.</p>
                 </div>
               </div>
             </div>

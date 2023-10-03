@@ -112,6 +112,12 @@ section.home {
       }
     }
 
+    div.double-column {
+      display: flex;
+      row-gap: 2rem;
+      flex-direction: column;
+    }
+
     div.double-list {
       display: flex;
       row-gap: .25rem;
