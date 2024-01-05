@@ -1,8 +1,8 @@
 {
   "lang": "nl",
   "start_url": "/",
-  "name": "CV",
-  "short_name": "CV",
+  "name": "CV - Iwan van der Wal",
+  "short_name": "CV - Iwan",
   "description": "Mijn eigen cv website!",
   "icons": [
     {
@@ -19,5 +19,5 @@
   "theme_color": "#09203F",
   "background_color": "#537895",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait-primary"
 }
