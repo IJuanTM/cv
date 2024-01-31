@@ -1,9 +1,9 @@
 {
   "lang": "nl",
   "start_url": "/",
-  "name": "CV - Iwan van der Wal",
+  "name": "Curriculum Vitae - Iwan van der Wal",
   "short_name": "CV - Iwan",
-  "description": "Mijn eigen cv website!",
+  "description": "Mijn curriculum vitae website!",
   "icons": [
     {
       "src": "img/favicon/android-chrome-192x192.png",

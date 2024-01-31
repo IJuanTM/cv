@@ -15,7 +15,7 @@ define('BASEDIR', realpath(dirname(__DIR__)));
 require_once BASEDIR . '/vendor/autoload.php';
 
 // Load the .env file
-Dotenv\Dotenv::createImmutable(BASEDIR)->load();
+Dotenv\Dotenv::createImmutable(BASEDIR)->safeLoad();
 
 // Require the config files
 foreach (glob(BASEDIR . '/app/Config/*.php') as $file) require_once $file;

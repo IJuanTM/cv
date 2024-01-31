@@ -1,16 +1,16 @@
 {
   "name": "cv",
-  "description": "Mijn eigen cv website!",
-  "version": "1.0.0",
+  "description": "Mijn curriculum vitae website!",
+  "version": "1.1.0",
   "devDependencies": {
-    "npm": "^10.1.0",
+    "npm": "^10.4.0",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.67.0",
-    "rollup": "^3.29.2",
-    "@rollup/plugin-commonjs": "^25.0.4",
-    "@rollup/plugin-node-resolve": "^15.2.1",
-    "@rollup/plugin-terser": "^0.4.3",
-    "browser-sync": "^2.29.3"
+    "sass": "^1.70.0",
+    "rollup": "^4.9.6",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "browser-sync": "^3.0.2"
   },
   "scripts": {
     "postinstall": "npm run build",

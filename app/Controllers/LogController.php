@@ -17,7 +17,13 @@ class LogController
      */
     public static function log($message, $type): void
     {
-        // Open log file
+        // Get the Logs directory
+        $dir = BASEDIR . '/app/Logs';
+
+        // Check if the Logs directory exists and create it if it doesn't
+        if (!is_dir($dir)) mkdir($dir);
+
+        // Open log file or create it if it doesn't exist
         $file = fopen(BASEDIR . "/app/Logs/$type.log", 'a');
 
         // Get debug backtrace

@@ -12,14 +12,14 @@ class PageController extends PageModel
 {
     public function __construct()
     {
-        // Get the current url
-        $urlArr = explode('/', rtrim(strtolower($_REQUEST['__uri'] ?? REDIRECT), '/'));
+        // Split the url route into an array
+        $urlArr = explode('/', explode('?', trim(strtolower($_SERVER['REQUEST_URI']), '/') ?: REDIRECT)[0]);
 
         // Create the a page object from the current url, with the page name, subpages and parameters
         parent::__construct(
             array_shift($urlArr),
             $urlArr,
-            array_slice($_GET, 1)
+            $_GET
         );
 
         // Load the page

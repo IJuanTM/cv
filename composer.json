@@ -1,11 +1,11 @@
 {
   "name": "cv/cv",
-  "description": "Mijn eigen cv website!",
+  "description": "Mijn curriculum vitae website!",
   "require": {
     "php": "^8.2",
     "ext-pdo": "*",
     "ext-pdo_mysql": "*",
-    "vlucas/phpdotenv": "^v5.5.0"
+    "vlucas/phpdotenv": "^v5.6.0"
   },
   "autoload": {
     "psr-4": {
