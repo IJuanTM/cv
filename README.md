@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-#### Mijn eigen cv website!
+#### Mijn curriculum vitae website!
 
 ***
 
