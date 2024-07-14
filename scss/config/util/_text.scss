@@ -1,6 +1,14 @@
 a {
   text-decoration: underline;
 
+  &[target=_blank]::after {
+    content: "🡵";
+    font-size: .5rem;
+    vertical-align: top;
+    color: rgba(#FFF, .5);
+    display: inline-block;
+  }
+
   &:hover, &:focus {
     color: rgba(#FFF, .75);
   }

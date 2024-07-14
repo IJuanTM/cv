@@ -3,10 +3,6 @@ section.home {
   padding: 0 1rem;
   flex-direction: column;
 
-  @media print {
-    padding: 0 !important;
-  }
-
   @include breakpoint-up(sm) {
     padding: 0 2rem;
   }
@@ -26,14 +22,6 @@ section.home {
   > div.row {
     column-gap: 4rem;
 
-    @media print {
-      column-gap: 2rem !important;
-
-      &:not(div.profile-header) {
-        flex-direction: row !important;
-      }
-    }
-
     @include breakpoint-down(lg) {
       &:not(div.profile-header) {
         flex-direction: column;
@@ -44,16 +32,16 @@ section.home {
       > div.col:not(div.empty) {
         padding-top: 1rem;
 
-        @media print {
-          padding-top: 2rem !important;
-        }
-
         @include breakpoint-up(sm) {
           padding-top: 2rem;
         }
 
         @include breakpoint-up(md) {
           padding-top: 4rem;
+        }
+
+        @media print {
+          padding-top: 2rem !important;
         }
       }
     }
@@ -76,20 +64,10 @@ section.home {
     ul.list {
       margin-left: .5rem;
 
-      @media print {
-        margin-left: 1.75rem !important;
-        list-style-type: disc !important;
-      }
-
       > li {
         position: relative;
         padding-left: 1.5rem;
         color: rgba(#FFF, .75);
-
-        @media print {
-          padding-left: 0 !important;
-          background-image: none !important;
-        }
 
         @include breakpoint-down(sm) {
           font-size: .875rem;
@@ -109,6 +87,16 @@ section.home {
             display: none !important;
           }
         }
+
+        @media print {
+          padding-left: 0 !important;
+          background-image: none !important;
+        }
+      }
+
+      @media print {
+        margin-left: 1.75rem !important;
+        list-style-type: disc !important;
       }
     }
 
@@ -125,10 +113,6 @@ section.home {
 
       > div.row {
         column-gap: .5rem;
-
-        @media print {
-          column-gap: 2rem !important;
-        }
 
         @include breakpoint-up(sm) {
           column-gap: 1rem;
@@ -148,6 +132,10 @@ section.home {
           @include breakpoint-down(sm) {
             max-width: 10rem;
           }
+        }
+
+        @media print {
+          column-gap: 2rem !important;
         }
       }
     }
@@ -176,10 +164,10 @@ section.home {
         }
 
         *.hl-red {
-          color: rgb(255 125 125 / .75);
+          color: rgba(#EE4444, .75);
 
           @media print {
-            color: rgb(155 55 55) !important;
+            color: #FF5555 !important;
           }
         }
 
@@ -188,18 +176,26 @@ section.home {
         }
 
         *.hl-green {
-          color: rgb(125 255 125 / .75);
+          color: rgba(#66EE66, .75);
 
           @media print {
-            color: rgb(55 155 55) !important;
+            color: #77FF77 !important;
           }
         }
 
         *.hl-purple {
-          color: rgb(125 125 255 / .75);
+          color: rgba(#9999DD, .75);
 
           @media print {
-            color: rgb(55 55 155) !important;
+            color: #AAAAEE !important;
+          }
+        }
+
+        *.hl-yellow {
+          color: rgba(#EEEE44, .75);
+
+          @media print {
+            color: #FFFF55 !important;
           }
         }
 
@@ -208,32 +204,6 @@ section.home {
 
           &:hover {
             color: rgba(#FFF, .5);
-          }
-        }
-      }
-    }
-
-    div.bar {
-      column-gap: .5rem;
-
-      div.meter {
-        height: 100%;
-        column-gap: .25rem;
-
-        > div.col {
-          border-radius: .25rem;
-          background-color: rgba(#FFF, .25);
-
-          @media print {
-            background-color: rgba(#000, .5) !important;
-          }
-
-          &.fill {
-            background-color: rgba(#FFF, .5);
-
-            @media print {
-              background-color: rgba(#000, .75) !important;
-            }
           }
         }
       }
@@ -249,11 +219,6 @@ section.home {
     &.profile-header {
       row-gap: 2rem;
       column-gap: 2rem;
-
-      @media print {
-        column-gap: 4rem !important;
-        margin-bottom: -1rem !important;
-      }
 
       @include breakpoint-up(md) {
         row-gap: 4rem;
@@ -326,6 +291,23 @@ section.home {
           }
         }
       }
+
+      @media print {
+        column-gap: 4rem !important;
+        margin-bottom: -1rem !important;
+      }
     }
+
+    @media print {
+      column-gap: 2rem !important;
+
+      &:not(div.profile-header) {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+  @media print {
+    padding: 0 !important;
   }
 }

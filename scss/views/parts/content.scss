@@ -2,12 +2,12 @@ main.content {
   padding: 2rem 0;
   min-height: calc(100vh - 6rem);
 
-  @media print {
-    padding: 0;
-  }
-
   @include breakpoint-up(sm) {
     padding: 4rem 0;
     min-height: calc(100vh - 8rem);
+  }
+
+  @media print {
+    padding: 0;
   }
 }

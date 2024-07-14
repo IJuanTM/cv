@@ -2,10 +2,6 @@ header {
   z-index: 2;
   position: relative;
 
-  @media print {
-    display: none;
-  }
-
   > div.navbar {
     z-index: 2;
     height: 6rem;
@@ -115,5 +111,9 @@ header {
         }
       }
     }
+  }
+
+  @media print {
+    display: none;
   }
 }

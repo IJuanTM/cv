@@ -1,16 +1,15 @@
-@media print {
-  *.no-print {
-    display: none;
-  }
-
-  *:not(:is(*.hl-red, *.hl-green, *.hl-purple)) {
-    color: #000 !important;
-  }
-}
-
 html {
   line-height: 1.25;
+  font-size: .875rem;
   scroll-behavior: smooth;
+
+  @include breakpoint-down(sm) {
+    font-size: .75rem;
+  }
+
+  @include breakpoint-up(lg) {
+    font-size: 1rem;
+  }
 
   @media print {
     font-size: .75rem;
@@ -21,7 +20,7 @@ body {
   color: #FFF;
   position: relative;
   font-family: "Rubik", sans-serif;
-  background-image: linear-gradient(to top, #09203F 0%, #537895 100%);
+  background-image: linear-gradient(to top, $theme-1 0%, $theme-2 100%);
 
   @media print {
     background-image: none;
@@ -68,12 +67,12 @@ div.blob-top, div.blob-middle, div.blob-bottom {
   position: fixed;
   pointer-events: none;
 
-  @media print {
-    display: none;
+  > svg {
+    filter: drop-shadow(0 0 .25rem rgba($theme-3, .25));
   }
 
-  > svg {
-    filter: drop-shadow(0 0 .25rem rgba(#000, .25));
+  @media print {
+    display: none;
   }
 }
 
@@ -120,5 +119,17 @@ div.to-top {
 
   @include breakpoint-down(sm) {
     display: none;
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+@media print {
+  *.no-print {
+    display: none;
+  }
+
+  *:not(:is(*.hl-red, *.hl-green, *.hl-purple)) {
+    color: #000 !important;
   }
 }
