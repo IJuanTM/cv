@@ -15,3 +15,6 @@ public/js/main.min.js
 
 # Logs
 app/Logs
+
+# Database .sql files
+app/Database/**/*.sql
