@@ -47,8 +47,8 @@ section.home {
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: .25rem;
+      font-size: 2rem !important;
+      margin-bottom: .25rem !important;
     }
 
     div.text {
@@ -218,6 +218,7 @@ section.home {
 
     &.profile-header {
       row-gap: 2rem;
+      padding: 2rem 0;
       column-gap: 2rem;
 
       @include breakpoint-up(md) {
@@ -270,24 +271,23 @@ section.home {
         display: flex;
 
         > svg {
-          width: 16rem;
+          width: 12rem;
           filter: drop-shadow(0 0 .25rem rgba(#000, .25));
 
           @media print {
-            width: 14rem !important;
             filter: none !important;
           }
 
           @include breakpoint-up(sm) {
-            width: 18rem;
+            width: 14rem;
           }
 
           @include breakpoint-up(md) {
-            width: 20rem;
+            width: 16rem;
           }
 
           @include breakpoint-up(lg) {
-            width: 24rem;
+            width: 20rem;
           }
         }
       }

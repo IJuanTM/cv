@@ -44,122 +44,87 @@
       </div>
     </div>
 
-    <div class="col">
+    <div class="col" id="personalia">
       <div class="row">
-        <div class="col" id="personalia">
-          <div class="row">
-            <div class="col">
-              <h2>Personalia</h2>
-            </div>
-          </div>
+        <div class="col">
+          <h2>Personalia</h2>
+        </div>
+      </div>
 
-          <hr>
+      <hr>
 
+      <div class="row">
+        <div class="col double-column">
           <div class="row">
-            <div class="col double-column">
+            <div class="col double-list">
               <div class="row">
-                <div class="col double-list">
-                  <div class="row">
-                    <div class="col label-md">Geboortedatum</div>
-                    <div class="col">25 oktober 2001</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col label-md">Nationaliteit</div>
-                    <div class="col">Nederlandse</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col label-md">Adres</div>
-                    <div class="col">
-                      <div class="row">
-                        <div class="col">Scheldestraat 49</div>
-                      </div>
-                      <div class="row">
-                        <div class="col">3522 CB Utrecht</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="col label-md">Geboortedatum</div>
+                <div class="col">25 oktober 2001</div>
               </div>
 
               <div class="row">
-                <div class="col double-list">
-                  <div class="row">
-                    <div class="col label-md">E-mailadres</div>
-                    <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>
-                  </div>
+                <div class="col label-md">Nationaliteit</div>
+                <div class="col">Nederlandse</div>
+              </div>
 
+              <div class="row">
+                <div class="col label-md">Adres</div>
+                <div class="col">
                   <div class="row">
-                    <div class="col label-md">Telefoonnummer</div>
-                    <div class="col"><a href="tel:+31637276904">+31 6 37 27 69 04</a></div>
-                  </div>
 
-                  <div class="row">
-                    <div class="col label-md">LinkedIn</div>
-                    <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal" target="_blank">iwanvanderwal</a></div>
-                  </div>
+                    <?php if (isset($_SESSION['user']) || isset($_SESSION['token'])) : ?>
+                      <div class="col">Scheldestraat 49</div>
+                    <?php else : ?>
+                      <div class="col obfuscated-row"><span class="obfuscated" title="Content verborgen voor privacy, klik voor meer informatie.">Gkfeasdcvbret 23</span><i class="fas fa-eye-slash access-modal"></i></div>
+                    <?php endif ?>
 
-                  <div class="row">
-                    <div class="col label-md">Website</div>
-                    <div class="col"><a href="https://www.iwanvanderwal.nl" target="_blank">iwanvanderwal.nl</a></div>
                   </div>
-
                   <div class="row">
-                    <div class="col label-md">GitHub</div>
-                    <div class="col"><a href="https://github.com/IJuanTM" target="_blank">IJuanTM</a></div>
+                    <?php if (isset($_SESSION['user']) || isset($_SESSION['token'])) : ?>
+                      <div class="col">3522 CB Utrecht</div>
+                    <?php else : ?>
+                      <div class="col obfuscated-row"><span class="obfuscated" title="Content verborgen voor privacy, klik voor meer informatie.">6578 KG</span><i class="fas fa-eye-slash access-modal"></i> Utrecht</div>
+                    <?php endif ?>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col double-list">
+              <div class="row">
+                <div class="col label-md">E-mailadres</div>
+                <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">Telefoonnummer</div>
+                <?php if (isset($_SESSION['user']) || isset($_SESSION['token'])) : ?>
+                  <div class="col"><a href="tel:+31637276904">+31 6 37 27 69 04</a></div>
+                <?php else : ?>
+                  <div class="col obfuscated-row">+31 6 <span class="obfuscated" title="Content verborgen voor privacy, klik voor meer informatie.">78 12 23 90</span><i class="fas fa-eye-slash access-modal"></i></div>
+                <?php endif ?>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">LinkedIn</div>
+                <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal" target="_blank">iwanvanderwal</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">Website</div>
+                <div class="col"><a href="https://www.iwanvanderwal.nl" target="_blank">iwanvanderwal.nl</a></div>
+              </div>
+
+              <div class="row">
+                <div class="col label-md">GitHub</div>
+                <div class="col"><a href="https://github.com/IJuanTM" target="_blank">IJuanTM</a></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!--      <div class="row">-->
-      <!--        <div class="col" id="contact">-->
-      <!--          <div class="row">-->
-      <!--            <div class="col">-->
-      <!--              <h2>Contact</h2>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!---->
-      <!--          <hr>-->
-      <!---->
-      <!--          <div class="row">-->
-      <!--            <div class="col double-column">-->
-      <!--              <div class="row">-->
-      <!--                <div class="col double-list">-->
-      <!--                  <div class="row">-->
-      <!--                    <div class="col label-md">E-mailadres</div>-->
-      <!--                    <div class="col"><a href="mailto:iwan2510@gmail.com">iwan2510@gmail.com</a></div>-->
-      <!--                  </div>-->
-      <!---->
-      <!--                  <div class="row">-->
-      <!--                    <div class="col label-md">Telefoonnummer</div>-->
-      <!--                    <div class="col"><a href="tel:+31637276904">+31 6 37 27 69 04</a></div>-->
-      <!--                  </div>-->
-      <!---->
-      <!--                  <div class="row">-->
-      <!--                    <div class="col label-md">LinkedIn</div>-->
-      <!--                    <div class="col"><a href="https://www.linkedin.com/in/iwanvanderwal" target="_blank">iwanvanderwal</a></div>-->
-      <!--                  </div>-->
-      <!---->
-      <!--                  <div class="row">-->
-      <!--                    <div class="col label-md">Website</div>-->
-      <!--                    <div class="col"><a href="https://www.iwanvanderwal.nl" target="_blank">iwanvanderwal.nl</a></div>-->
-      <!--                  </div>-->
-      <!---->
-      <!--                  <div class="row">-->
-      <!--                    <div class="col label-md">GitHub</div>-->
-      <!--                    <div class="col"><a href="https://github.com/IJuanTM" target="_blank">IJuanTM</a></div>-->
-      <!--                  </div>-->
-      <!--                </div>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--      </div>-->
     </div>
   </div>
 
@@ -248,7 +213,7 @@
       </div>
     </div>
 
-    <div class="col no-print" id="certificaten">
+    <div class="col no-print">
       <div class="row">
         <div class="col">
           <h2>Certificaten</h2>
@@ -454,7 +419,7 @@
             <div class="col">
               <div class="row">
                 <div class="col">
-                  <h3><span class="hl-red">Databases</span></h3>
+                  <h3><span class="hl-red">Databases en infrastructuur</span></h3>
                 </div>
               </div>
 
@@ -463,6 +428,9 @@
                   <ul class="list">
                     <li>MySQL</li>
                     <li>SQLite</li>
+                    <li>Apache</li>
+                    <li>Azure</li>
+                    <li>Docker</li>
                   </ul>
                 </div>
               </div>
@@ -471,16 +439,17 @@
             <div class="col">
               <div class="row">
                 <div class="col">
-                  <h3><span class="hl-yellow">Overig</span></h3>
+                  <h3><span class="hl-yellow">Overige technieken</span></h3>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
                   <ul class="list">
-                    <li>Linux</li>
-                    <li>Windows</li>
-                    <li>Command line</li>
+                    <li>Linux CLI</li>
+                    <li>Windows CLI</li>
+                    <li>SCRUM</li>
+                    <li>DevOps</li>
                   </ul>
                 </div>
               </div>
@@ -492,7 +461,7 @@
   </div>
 
   <div class="row">
-    <div class="col no-print" id="projecten">
+    <div class="col no-print">
       <div class="row">
         <div class="col">
           <h2>Projecten</h2>
@@ -551,7 +520,7 @@
 
               <div class="row">
                 <div class="col">
-                  <p class="text hl-white">Mijn eigen portfolio-website waar ik mijn projecten op kan plaatsen. Nog steeds bezig met aanvullen en verbeteren.</p>
+                  <p class="text hl-white">Mijn eigen portfolio-website voor het showcasen van mijn projecten en ervaringen. Gemaakt met behulp van PHP, HTML, CSS, JavaScript en Sass. Nog work-in-progress.</p>
                 </div>
               </div>
             </div>
