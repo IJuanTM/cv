@@ -7,8 +7,15 @@
 // VIEWS
 @import "views/error";
 @import "views/home";
+@import "views/access-tokens";
 
 // PARTS
+@import "views/parts/access-modal";
 @import "views/parts/alert";
 @import "views/parts/content";
 @import "views/parts/header";
+
+// COMPONENTS
+@import "components/button";
+@import "components/form";
+@import "components/table";

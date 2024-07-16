@@ -1,0 +1,44 @@
+<?php use app\Controllers\{AccessTokenController, FormController, PageController}; ?>
+
+<section class="access-tokens">
+  <div class="row center-x">
+    <form class="col edit-access-token" method="POST" action="">
+      <div class="row">
+        <div class="col center-x">
+          <h2>Create access token</h2>
+        </div>
+      </div>
+
+      <?= FormController::$alert ?>
+
+      <div class="row form-row">
+        <div class="col form-group">
+          <div class="row">
+            <label class="col" for="token">Token: <span class="required">*</span></label>
+          </div>
+          <div class="row input-group <?= (isset($_POST['submit']) && empty($_POST['token'])) ? 'error' : '' ?>">
+            <div class="col input-prepend center f-0"><i class="fas fa-key"></i></div>
+            <input class="col" id="token" type="text" name="token" placeholder="Enter token:" maxlength="6" value="<?= AccessTokenController::generateToken() ?>">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col form-group">
+          <div class="row">
+            <label class="col" for="expires_at">Expires: <span class="required">*</span></label>
+          </div>
+          <div class="row input-group <?= (isset($_POST['submit']) && empty($_POST['expires_at'])) ? 'error' : '' ?>">
+            <div class="col input-prepend center f-0"><i class="fas fa-calendar-day"></i></div>
+            <input class="col" id="expires_at" type="date" name="expires_at" value="<?= date('Y-m-d', strtotime('+1 week')) ?>">
+          </div>
+        </div>
+      </div>
+
+      <div class="row button-row center-x">
+        <a class="col center-y f-0" href="<?= PageController::url('access-tokens') ?>"><i class="fas fa-arrow-left"></i>Back</a>
+        <button class="col center-y f-0" type="submit" name="submit"><i class="fas fa-plus"></i>Create access token</button>
+      </div>
+    </form>
+  </div>
+</section>

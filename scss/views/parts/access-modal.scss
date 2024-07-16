@@ -1,0 +1,52 @@
+section.access-modal {
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: fixed;
+  background-color: rgba(#000, .5);
+
+  @include breakpoint-up(sm) {
+    padding: 2rem;
+  }
+
+  div.modal-content {
+    padding: 1rem;
+    row-gap: 1rem;
+    display: flex;
+    max-width: 50rem;
+    position: relative;
+    border-radius: .5rem;
+    flex-direction: column;
+    backdrop-filter: blur(.25rem);
+    background-color: rgb(205 205 205 / .25);
+
+    @include breakpoint-up(sm) {
+      padding: 2rem;
+      row-gap: 2rem;
+    }
+
+    div.close-row {
+      top: 0;
+      right: 0;
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+
+      i {
+        cursor: pointer;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: rgba(#FFF, .75);
+        }
+      }
+    }
+
+    form {
+      max-width: 30rem !important;
+    }
+  }
+}

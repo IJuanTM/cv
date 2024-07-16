@@ -1,0 +1,94 @@
+<?php if (isset($this->getUrl()['subpages'][0]) && in_array($this->getUrl()['subpages'][0], ['create', 'edit', 'delete', 'restore'])) : ?>
+
+  <?php $this->part('access-tokens/' . $this->getUrl()['subpages'][0]) ?>
+
+<?php else : ?>
+
+  <section class="access-tokens">
+    <div class="row">
+      <div class="col center-x">
+        <h2>Access Tokens</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col access-tokens-table">
+
+        <?php if (count($this->getObj()->accessTokens) > $this->getObj()->page * 10) : ?>
+
+          <div class="row table-container">
+            <div class="col">
+              <table>
+                <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Token</th>
+                  <th>Uses</th>
+                  <th>Expires at</th>
+                  <th>Created at</th>
+                  <th>Last updated</th>
+                  <th>Is active</th>
+                  <th>Deleted at</th>
+                  <th>Actions</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <?php foreach (array_slice($this->getObj()->accessTokens, $this->getObj()->page * 10, 10) as $accessToken) : ?>
+
+                  <tr class="<?= !$accessToken['is_active'] ? 'deleted' : '' ?>">
+                    <td><?= $accessToken['id'] ?></td>
+                    <td><?= $accessToken['token'] ?></td>
+                    <td><?= $accessToken['uses'] ?></td>
+                    <td><?= $accessToken['expires_at'] ?></td>
+                    <td><?= $accessToken['created_at'] ?></td>
+                    <td><?= $accessToken['last_update'] ?></td>
+                    <td><?= !$accessToken['is_active'] ? '<i class="fas fa-times"></i>' : '<i class="fas fa-check"></i>' ?></td>
+                    <td><?= $accessToken['deleted_at'] ?: '-' ?></td>
+                    <td class="row action-row">
+                      <?php if ($accessToken['is_active']) : ?>
+                        <a class="col table-action f-0" href="<?= $this->url('access-tokens/edit?id=' . $accessToken['id']) ?>"><i class="fas fa-pen"></i></a>
+                        <a class="col table-action f-0" href="<?= $this->url('access-tokens/delete?id=' . $accessToken['id']) ?>"><i class="fas fa-trash"></i></a>
+                      <?php else : ?>
+                        <a class="col table-action f-0" href="<?= $this->url('access-tokens/restore?id=' . $accessToken['id']) ?>"><i class="fas fa-wrench"></i></a>
+                      <?php endif ?>
+                    </td>
+                  </tr>
+
+                <?php endforeach ?>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row action-row">
+            <div class="col f-0">
+              <p><?= ($this->getObj()->page * 10) + 1 ?> - <?= min((($this->getObj()->page + 1) * 10), count($this->getObj()->accessTokens)) ?> of <?= count($this->getObj()->accessTokens) ?> access tokens</p>
+            </div>
+            <div class="col access-tokens-pagination end-x">
+              <a class="access-tokens-action" href="<?= $this->url('access-tokens?page=' . ($this->getObj()->page - 1)) ?>" <?= $this->getObj()->page > 0 ?: 'inert' ?>><i class="fas fa-chevron-left"></i> Previous</a>
+              <a class="access-tokens-action" href="<?= $this->url('access-tokens?page=' . ($this->getObj()->page + 1)) ?>" <?= $this->getObj()->page < ceil(count($this->getObj()->accessTokens) / 10) - 1 ?: 'inert' ?>>Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+
+        <?php else : ?>
+
+          <div class="row">
+            <div class="col center-x">
+              <p>No access tokens found.</p>
+            </div>
+          </div>
+
+        <?php endif ?>
+
+      </div>
+    </div>
+
+    <div class="row button-row center-x">
+      <a class="col button center-y f-0" href="<?= $this->url('access-tokens/create') ?>"><i class="fas fa-plus"></i>Create access token</a>
+    </div>
+  </section>
+
+<?php endif ?>

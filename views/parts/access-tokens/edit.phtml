@@ -1,0 +1,96 @@
+<?php use app\Controllers\{FormController, PageController}; ?>
+
+<?php
+if (isset($_POST['submit'])) {
+  try {
+    $expiresAt = new DateTime($_POST['expires_at']);
+  } catch (Exception $e) {
+    $expiresAt = new DateTime();
+  }
+} else {
+  try {
+    $expiresAt = new DateTime($this->getObj()->accessToken['expires_at']);
+  } catch (Exception $e) {
+    $expiresAt = new DateTime();
+  }
+}
+?>
+
+<?php if (isset($this->getObj()->accessToken)) : ?>
+
+  <section class="access-tokens">
+    <div class="row center-x">
+      <form class="col edit-user" method="POST" action="">
+        <div class="row">
+          <div class="col center-x">
+            <h2>Edit access token</h2>
+          </div>
+        </div>
+
+        <?= FormController::$alert ?>
+
+        <div class="row form-row">
+          <div class="col form-group" inert>
+            <div class="row">
+              <label class="col" for="id">Id:</label>
+            </div>
+            <div class="row input-group">
+              <div class="col input-prepend center f-0"><i class="fas fa-hashtag"></i></div>
+              <input class="col" id="id" type="number" name="id" value="<?= $this->getObj()->accessToken['id'] ?>">
+            </div>
+          </div>
+
+          <div class="col form-group" inert>
+            <div class="row">
+              <label class="col" for="last_update">Last update:</label>
+            </div>
+            <div class="row input-group">
+              <div class="col input-prepend center f-0"><i class="fas fa-calendar-check"></i></div>
+              <input class="col" id="last_update" type="text" name="last_update" value="<?= $this->getObj()->accessToken['last_update'] ?>">
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col form-group" inert>
+            <div class="row">
+              <label class="col" for="token">Token:</label>
+            </div>
+            <div class="row input-group">
+              <div class="col input-prepend center f-0"><i class="fas fa-user"></i></div>
+              <input class="col" id="token" type="text" name="token" placeholder="Enter token:" maxlength="6" value="<?= $_POST['token'] ?? $this->getObj()->accessToken['token'] ?>">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col form-group">
+            <div class="row">
+              <label class="col" for="expires_at">Expires:</label>
+            </div>
+            <div class="row input-group <?= (isset($_POST['submit']) && empty($_POST['expires_at'])) ? 'error' : '' ?>">
+              <div class="col input-prepend center f-0"><i class="fas fa-calendar-day"></i></div>
+              <input class="col" id="expires_at" type="date" name="expires_at" value="<?= $expiresAt->format('Y-m-d') ?>">
+            </div>
+          </div>
+        </div>
+
+        <div class="row button-row center-x">
+          <a class="col center-y f-0" href="<?= PageController::url('access-tokens') ?>"><i class="fas fa-arrow-left"></i>Back</a>
+          <button class="col edit-lock center-y f-0" type="submit" name="submit" inert><i class="fas fa-user-pen"></i>Edit access token</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<?php else : ?>
+
+  <section class="access-tokens min-h-content center-x">
+    <div class="row">
+      <div class="col center-x">
+        <h5>Could not find access token.</h5>
+      </div>
+    </div>
+  </section>
+
+<?php endif ?>

@@ -7,18 +7,23 @@
 <div class="blob-middle"><?= AppController::svg('blob') ?></div>
 <div class="blob-bottom"><?= AppController::svg('blob') ?></div>
 
-<!-- Print -->
-<div class="print">Print</div>
+<?php if ($this->getUrl()['page'] == 'home') : ?>
+  <!-- Print -->
+  <div class="print">Print</div>
 
-<!-- To top -->
-<div class="invisible to-top">Naar boven</div>
+  <!-- To top -->
+  <div class="invisible to-top">Naar boven</div>
+<?php endif ?>
 
 <!-- Alert -->
 <?php if (isset($_SESSION['alert'])) : ?>
   <div class="alert <?= implode(' ', $_SESSION['alert']['types']) ?>" role="alert" data-timeout="<?= isset($_SESSION['alert']['timeout']) ? ($_SESSION['alert']['timeout'] - time()) * 1000 : 0 ?>">
     <?= $_SESSION['alert']['message'] ?>
   </div>
-<?php endif; ?>
+<?php endif ?>
+
+<!-- Access modal -->
+<?php $this->part('access-modal') ?>
 
 <!-- JavaScript -->
 <?php $this->part('index/js') ?>

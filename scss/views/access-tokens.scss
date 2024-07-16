@@ -1,0 +1,94 @@
+section.access-tokens, div.access-tokens-table {
+  display: flex;
+  flex-direction: column;
+}
+
+section.access-tokens {
+  row-gap: 1rem;
+  padding: 0 1rem;
+
+  @include breakpoint-up(sm) {
+    row-gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  div.access-tokens-table {
+    row-gap: .5rem;
+
+    i.fa-check {
+      color: #77FF77;
+    }
+
+    i.fa-times {
+      color: #FF5555;
+    }
+
+    tr.deleted > td:not(.action-row) {
+      color: rgba(#FFF, .25);
+    }
+
+    *.action-row {
+      column-gap: 1rem;
+    }
+
+    a.table-action, a.access-tokens-action {
+      text-decoration: none;
+      white-space: pre-wrap;
+
+      > i {
+        font-size: .875rem;
+      }
+
+      &.delete {
+        color: rgba(#EE4444, .75);
+
+        &:hover, &:focus {
+          color: #FF5555 !important;
+        }
+      }
+
+      &.restore {
+        color: rgba(#66EE66, .75);
+
+        &:hover, &:focus {
+          color: #77FF77 !important;
+        }
+      }
+    }
+  }
+
+  form div.button-row > button {
+    &.delete-access-token, &.restore-access-token {
+      color: #FFF;
+
+      &:hover, &:focus {
+        color: rgba(#FFF, .75);
+      }
+    }
+
+    &.delete-access-token {
+      background-color: rgba(#EE4444, .75) !important;
+
+      &[inert] {
+        color: rgba(#FFF, .5) !important;
+        background-color: rgba(#EE4444, .5) !important;
+      }
+
+      &:hover, &:focus {
+        background-color: #FF5555 !important;
+      }
+    }
+
+    &.restore-access-token {
+      background-color: rgba(#66EE66, .75) !important;
+
+      &:hover, &:focus {
+        background-color: #77FF77 !important;
+      }
+    }
+  }
+
+  div.access-tokens-pagination {
+    column-gap: 1rem;
+  }
+}

@@ -1,0 +1,57 @@
+<?php use app\Controllers\FormController; ?>
+
+<section class="modal access-modal center hidden">
+  <div class="row">
+    <div class="col modal-content">
+      <div class="row close-row center-x">
+        <button class="col close-modal center-y f-0" aria-label="Knop om het venster te sluiten"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="row">
+        <div class="col center-x">
+          <h2 class="modal-title">Verborgen content</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>Sommige van mijn persoonlijke informatie is verborgen om privacy redenen. Om deze content te bekijken, heb je een toegangscode nodig.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>Je kunt contact met mij opnemen via <a href="mailto:iwan2510@gmail.com">mail</a> of <a href="https://www.linkedin.com/in/iwanvanderwal/" target="_blank">LinkedIn</a> om een toegangscode te ontvangen.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>Heb je al een toegangscode? Vul deze dan hieronder in:</p>
+        </div>
+      </div>
+
+      <div class="row center-x">
+        <form class="col" method="POST" action="">
+          <?= FormController::$alert ?>
+
+          <div class="row">
+            <div class="col form-group">
+              <div class="row">
+                <label class="col" for="token">Code:</label>
+              </div>
+              <div class="row input-group">
+                <div class="col input-prepend center f-0"><i class="fas fa-key"></i></div>
+                <input class="col" id="token" type="text" name="token" maxlength="6" placeholder="A1B2C3">
+              </div>
+            </div>
+          </div>
+
+          <div class="row button-row center-x">
+            <button class="col center-y f-0" type="submit" name="submit" aria-label="Knop om de code te controleren"><i class="fas fa-check"></i>Controleren</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

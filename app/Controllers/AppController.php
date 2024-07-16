@@ -13,6 +13,9 @@ class AppController
         // Clear the alert if the timeout has passed
         if (isset($_SESSION['alert']) && $_SESSION['alert']['timeout'] < time()) unset($_SESSION['alert']);
 
+        // Log in the user if the remember cookie is set
+        if (!isset($_SESSION['user']) && isset($_COOKIE['remember'])) UserController::rememberLogin($_COOKIE['remember']);
+
         // Create a new PageController object
         new PageController();
     }

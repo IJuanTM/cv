@@ -1,0 +1,15 @@
+*.button {
+  cursor: pointer;
+  column-gap: .5rem;
+  padding: .5rem 2rem;
+  border-radius: .25rem;
+  text-decoration: none;
+  background-color: $theme-2;
+  box-shadow: 0 0 .25rem rgba(#000, .25);
+
+  &:hover, &:focus {
+    color: rgba(#FFF, .75);
+    background-color: $theme-1;
+    box-shadow: inset 0 0 .25rem 0 rgba(#000, .5);
+  }
+}
