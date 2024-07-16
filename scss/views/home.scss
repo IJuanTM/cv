@@ -293,6 +293,7 @@ section.home {
       }
 
       @media print {
+        padding: 0 !important;
         column-gap: 4rem !important;
         margin-bottom: -1rem !important;
       }
