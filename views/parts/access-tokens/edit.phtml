@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
   <section class="access-tokens">
     <div class="row center-x">
-      <form class="col edit-user" method="POST" action="">
+      <form class="col" method="POST" action="">
         <div class="row">
           <div class="col center-x">
             <h2>Edit access token</h2>
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
               <label class="col" for="token">Token:</label>
             </div>
             <div class="row input-group">
-              <div class="col input-prepend center f-0"><i class="fas fa-user"></i></div>
+              <div class="col input-prepend center f-0"><i class="fas fa-key"></i></div>
               <input class="col" id="token" type="text" name="token" placeholder="Enter token:" maxlength="6" value="<?= $_POST['token'] ?? $this->getObj()->accessToken['token'] ?>">
             </div>
           </div>
@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 
         <div class="row button-row center-x">
           <a class="col center-y f-0" href="<?= PageController::url('access-tokens') ?>"><i class="fas fa-arrow-left"></i>Back</a>
-          <button class="col edit-lock center-y f-0" type="submit" name="submit" inert><i class="fas fa-user-pen"></i>Edit access token</button>
+          <button class="col edit-lock center-y f-0" type="submit" name="submit" inert><i class="fas fa-pen"></i>Edit access token</button>
         </div>
       </form>
     </div>

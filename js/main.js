@@ -140,7 +140,7 @@ const
   deleteCheckbox = document.querySelector('input.delete-checkbox'),
   deleteAccessTokenButton = document.querySelector('button.delete-access-token');
 
-// On change, set or remove the inert attribute from the delete user button depending on whether the checkbox is checked
+// On change, set or remove the inert attribute from the delete access token button depending on whether the checkbox is checked
 if (deleteCheckbox) deleteCheckbox.addEventListener('change', () => deleteCheckbox.checked
   ? deleteAccessTokenButton.removeAttribute('inert')
   : deleteAccessTokenButton.setAttribute('inert', ''));
