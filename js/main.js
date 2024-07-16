@@ -162,3 +162,23 @@ if (accessModal && closeAccessModal) {
     if (event.target === accessModal) accessModal.classList.add('hidden');
   });
 }
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+const copyToken = document.querySelectorAll('a.copy-token');
+
+if (copyToken) copyToken.forEach(token => token.addEventListener('click', event => {
+  event.preventDefault();
+
+  navigator.clipboard.writeText(token.getAttribute('data-clipboard-text')).then(() => {
+    const icon = token.querySelector('i');
+
+    icon.classList.remove('fa-copy');
+    icon.classList.add('fa-check');
+
+    setTimeout(() => {
+      icon.classList.remove('fa-check');
+      icon.classList.add('fa-copy');
+    }, 1000);
+  }, () => console.error('Failed to copy token to clipboard'));
+}));

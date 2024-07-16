@@ -8,6 +8,7 @@ node_modules
 
 # Compiled files
 public/css/main.min.css
+public/css/main.min.css.map
 public/js/main.min.js
 
 # Environment variables

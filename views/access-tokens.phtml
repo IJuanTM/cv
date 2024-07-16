@@ -39,7 +39,13 @@
 
                   <tr class="<?= !$accessToken['is_active'] ? 'deleted' : '' ?>">
                     <td><?= $accessToken['id'] ?></td>
-                    <td><?= $accessToken['token'] ?></td>
+                    <td>
+                      <?php if ($accessToken['is_active']) : ?>
+                        <?= $accessToken['token'] ?> <a class="copy-token" data-clipboard-text="<?= $this->url('home?token=' . $accessToken['token']) ?>"><i class="fas fa-copy"></i></a>
+                      <?php else : ?>
+                        <?= $accessToken['token'] ?>
+                      <?php endif ?>
+                    </td>
                     <td><?= $accessToken['uses'] ?></td>
                     <td><?= $accessToken['expires_at'] ?></td>
                     <td><?= $accessToken['created_at'] ?></td>
