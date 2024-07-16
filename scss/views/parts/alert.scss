@@ -2,15 +2,17 @@ div.alert {
   color: #FFF;
   display: flex;
   padding: 1rem;
+  border-radius: .5rem;
   box-shadow: 0 0 .25rem rgba(#000, .25);
   transition: visibility .15s, opacity .15s;
 
   &.global {
-    left: 0;
+    left: 50%;
     z-index: 4;
-    bottom: 2rem;
+    bottom: 1rem;
     margin: 1rem;
     position: fixed;
+    transform: translateX(-50%);
 
     @include breakpoint-down(sm) {
       width: calc(100% - 2rem);
@@ -22,18 +24,18 @@ div.alert {
   }
 
   &.success {
-    background-color: $green;
+    background-color: #77FF77;
   }
 
   &.warning {
-    background-color: $orange;
+    background-color: #FFAA55;
   }
 
   &.error {
-    background-color: $red;
+    background-color: #FF5555;
   }
 
   &.info {
-    background-color: $cyan;
+    background-color: #AAAAEE;
   }
 }

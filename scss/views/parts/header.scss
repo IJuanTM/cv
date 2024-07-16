@@ -66,6 +66,22 @@ header {
         padding: 0 1rem;
         text-decoration: none;
         white-space: pre-wrap;
+
+        &.access-tokens {
+          color: rgba(#9999DD, .75);
+
+          &:hover {
+            color: #AAAAEE;
+          }
+        }
+
+        &.logout {
+          color: rgba(#EE4444, .75);
+
+          &:hover {
+            color: #FF5555;
+          }
+        }
       }
     }
 

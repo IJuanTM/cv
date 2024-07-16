@@ -133,3 +133,45 @@ div.to-top {
     color: #000 !important;
   }
 }
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+[inert] {
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(.25);
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------------------------------- //
+
+div.obfuscated-row {
+  position: relative;
+
+  *.obfuscated {
+    cursor: help;
+    filter: blur(.25rem);
+    color: rgba(#FFF, .75);
+
+    + i {
+      right: 0;
+      height: 100%;
+      cursor: pointer;
+      font-size: .5rem;
+      position: absolute;
+      align-items: center;
+      display: inline-flex;
+
+      &:hover {
+        color: rgba(#FFF, .75);
+      }
+
+      @media print {
+        display: none;
+      }
+    }
+  }
+}
