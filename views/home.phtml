@@ -1,4 +1,4 @@
-<?php use app\Controllers\AppController; ?>
+<?php ?>
 
 <section class="home">
   <div class="row profile-header center-x">
@@ -16,8 +16,8 @@
       </div>
     </div>
 
-    <div class="col image f-0" role="img" aria-label="Profiel foto van Iwan van der Wal">
-      <?= AppController::svg('pf') ?>
+    <div class="col image f-0">
+      <img src="<?= $this->url('/img/svg/pf.svg') ?>" alt="Profiel foto van Iwan van der Wal">
     </div>
   </div>
 
