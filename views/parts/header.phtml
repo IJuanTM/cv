@@ -11,7 +11,7 @@
         <a class="col nav-item center f-0" href="<?= $this->url('home#werkervaring') ?>" aria-label="Link naar werkervaring sectie">Werkervaring</a>
         <a class="col nav-item center f-0" href="<?= $this->url('home#vaardigheden') ?>" aria-label="Link naar vaardigheden sectie">Vaardigheden</a>
         <?php if (isset($_SESSION['user'])) : ?>
-            <a class="col nav-item nav-link access-tokens center f-0" href="<?= $this->url('access-tokens') ?>" aria-label="Link naar access tokens overzicht">Access Tokens</a>
+          <a class="col nav-item nav-link access-tokens center f-0" href="<?= $this->url('access-tokens') ?>" aria-label="Link naar access tokens overzicht">Access Tokens</a>
           <a class="col nav-item nav-link logout center f-0" href="<?= $this->url('logout') ?>" aria-label="Logout button"><i class="fas fa-right-from-bracket"></i> Logout</a>
         <?php endif ?>
       </div>
