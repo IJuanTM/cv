@@ -2,10 +2,10 @@
   "name": "cv/cv",
   "description": "Mijn curriculum vitae website!",
   "require": {
-    "php": "^8.2",
+    "php": "^8.4",
     "ext-pdo": "*",
     "ext-pdo_mysql": "*",
-    "vlucas/phpdotenv": "^v5.6.0"
+    "vlucas/phpdotenv": "^v5.6.1"
   },
   "autoload": {
     "psr-4": {
