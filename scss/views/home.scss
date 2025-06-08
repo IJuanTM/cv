@@ -1,7 +1,7 @@
 section.home {
   display: flex;
-  padding: 0 1rem;
   flex-direction: column;
+  padding: 0 1rem;
 
   @include breakpoint-up(sm) {
     padding: 0 2rem;
@@ -102,8 +102,8 @@ section.home {
 
     div.double-column {
       display: flex;
-      row-gap: 2rem;
       flex-direction: column;
+      row-gap: 1rem;
     }
 
     div.double-list {

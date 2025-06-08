@@ -5,6 +5,10 @@ h2 {
 a {
   text-decoration: underline;
 
+  @media print {
+    text-decoration: none;
+  }
+
   &[target=_blank]::after {
     content: "🡵";
     font-size: .5rem;

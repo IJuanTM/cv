@@ -1,4 +1,4 @@
-<?php ?>
+<?php use app\Controllers\AppController; ?>
 
 <section class="home">
   <div class="row profile-header center-x">
@@ -33,9 +33,9 @@
 
       <div class="row">
         <div class="col text">
-          <p>Mijn naam is Iwan, ik ben <?= date_diff(date_create('20011025'), date_create(date('Ymd')))->format('%y') ?> jaar oud en woon in Utrecht.</p>
+          <p>Mijn naam is Iwan, ik ben <?= date_diff(date_create('2001-10-25'), date_create())->format('%y') ?> jaar oud en woon in Utrecht.</p>
 
-          <p>Al mijn hele leven heb ik een passie voor computers en technologie. Ik ben altijd bezig met het leren van nieuwe dingen en het uitproberen van nieuwe technologieën. Ik werk altijd zorgvuldig en nauwkeurig en ben altijd op zoek naar manieren om mezelf te verbeteren. Ik werk graag in een team, maar kan ook goed zelfstandig werken.</p>
+          <p>Al mijn hele leven heb ik een passie voor computers en technologie. Ik ben altijd bezig met het leren van nieuwe dingen en het uitproberen van nieuwe technologie&euml;n. Ik werk altijd zorgvuldig en nauwkeurig en ben altijd op zoek naar manieren om mezelf te verbeteren. Ik werk graag in een team, maar kan ook goed zelfstandig werken.</p>
 
           <p>Mijn kennis ligt vooral bij webdevelopment met PHP, HTML, CSS en JavaScript, maar ik ben ook bekend met C# (.NET), Java en Python. Ik werk graag aan zowel de front- als de back-end van een applicatie, en vind het leuk om te zien hoe de verschillende onderdelen samen komen. Verder heb ik ook ervaring met databases, zoals MySQL en SQLite, en met versiebeheer, zoals Git. Daarnaast kan ik goed overweg met Linux en Windows en ben ik bekend met het werken met de command line.</p>
 
@@ -114,7 +114,7 @@
 
               <div class="row">
                 <div class="col label-md">Website</div>
-                <div class="col"><a href="https://www.iwanvanderwal.nl" target="_blank">iwanvanderwal.nl</a></div>
+                <div class="col"><a href="https://www.iwanvanderwal.nl" target="_blank">https://www.iwanvanderwal.nl</a></div>
               </div>
 
               <div class="row">
@@ -155,9 +155,8 @@
               <div class="row">
                 <div class="col">
                   <ul class="list">
-                    <li>Specialisatie in Software Engineering</li>
-                    <li>Minor Software Reversing and Exploitation gedaan</li>
-                    <li>Favoriete vak: WPFW - Webprogramming, Frameworks & Usability, leren werken met C# en .NET en met accessibility</li>
+                    <li>Minor Software Reversing and Exploitation gedaan, leren werken met x86 Assembly en debuggers en decompilers</li>
+                    <li>Favoriete vak: WPFW - Webprogramming, Frameworks &amp; Usability, leren werken met C# en .NET en met accessibility</li>
                   </ul>
                 </div>
               </div>
@@ -202,7 +201,7 @@
               <div class="row">
                 <div class="col">
                   <ul class="list">
-                    <li>Informatica als keuzevak</li>
+                    <li>Informatica als keuzevak, leren werken met HTML en Java</li>
                     <li>Favoriete vakken: Informatica en Engels</li>
                   </ul>
                 </div>
@@ -277,8 +276,8 @@
               <div class="row">
                 <div class="col">
                   <ul class="list">
-                    <li>Het ontwikkelen van een SaaS administratie systeem voor de klanten van Lumera (AxyWare)</li>
-                    <li>Focus op het ontwikkelen van webportals voor klanten en klanten van de klanten</li>
+                    <li>Het ontwikkelen van een SaaS pensioen administratie systeem voor de klanten van Lumera (AxyWare)</li>
+                    <li>Focus op het ontwikkelen van een web-based client voor het systeem met behulp van C# (.NET Core) en webportalen voor deelnemers</li>
                     <li>Werken met C#, .NET (Framwork en Core), Blazor, HTML, CSS, JavaScript en MS SQL</li>
                   </ul>
                 </div>
@@ -301,8 +300,8 @@
               <div class="row">
                 <div class="col">
                   <ul class="list">
-                    <li>Verder ontwikkelen van het systeem uit de stage opdracht</li>
-                    <li>Het beheren van het systeem en de database</li>
+                    <li>Het ontwerpen, ontwikkelen en onderhouden van een intern ticket/project management systeem voor Ecoteers</li>
+                    <li>Gemaakt met behulp van Laravel, MySQL, HTML, CSS, Sass en JavaScript</li>
                   </ul>
                 </div>
               </div>
@@ -325,14 +324,14 @@
                 <div class="col">
                   <ul class="list">
                     <li>HBO afstudeeropdracht</li>
-                    <li>Maken van een berichtenmonitor applicatie voor een klant van Info Support</li>
+                    <li>Maken van een berichtenmonitor applicatie voor een klant van Info Support met behulp van C# (.NET) en Blazor</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row item-head">
+          <div class="row item-head no-print">
             <div class="col time">2023</div>
 
             <div class="col">
@@ -348,14 +347,14 @@
                 <div class="col">
                   <ul class="list">
                     <li>HBO 3e-jaars stage</li>
-                    <li>Maken van een intern ticket/project management systeem</li>
+                    <li>Maken van een intern ticket/project management systeem voor Ecoteers met behulp van Laravel</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row item-head">
+          <div class="row item-head no-print">
             <div class="col time">2020</div>
 
             <div class="col">
@@ -392,32 +391,77 @@
 
       <div class="row">
         <div class="col items">
-          <div class="row item-head">
-            <div class="col">
-              <div class="row">
+          <div class="row">
+            <div class="col text">
+              <div class="row item-head">
                 <div class="col">
-                  <h3><span class="hl-purple">Programeertalen</span></h3>
+                  <h3><span class="hl-purple">Programmeertalen</span></h3>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <ul class="list">
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>C#</li>
-                    <li>.NET</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                  </ul>
+                  <div class="row item-head">
+                    <div class="col hl-white">HTML</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2017-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">CSS</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2017-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">PHP</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2018-07-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">JavaScript</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">C# (.NET)</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-07-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Sass</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-07-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Python</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Java</div>
+                    <div class="col hl-white">3 Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">x86 Assembly</div>
+                    <div class="col hl-white">1 Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col">
-              <div class="row">
+          <div class="row">
+            <div class="col text">
+              <div class="row item-head">
                 <div class="col">
                   <h3><span class="hl-green">Frameworks en tools</span></h3>
                 </div>
@@ -425,56 +469,129 @@
 
               <div class="row">
                 <div class="col">
-                  <ul class="list">
-                    <li>Laravel</li>
-                    <li>Blazor</li>
-                    <li>Bootstrap</li>
-                    <li>Sass</li>
-                    <li>Git</li>
-                    <li>Composer</li>
-                    <li>NPM</li>
-                  </ul>
+                  <div class="row item-head">
+                    <div class="col hl-white">Git</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2018-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Laravel</div>
+                    <div class="col hl-white">4 Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Blazor</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2022-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">LINQ</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Entity Framework</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Composer</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">NPM</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row item-head">
-            <div class="col">
+          <div class="row">
+            <div class="col text">
               <div class="row">
-                <div class="col">
-                  <h3><span class="hl-red">Databases en infrastructuur</span></h3>
+                <div class="col item-head">
+                  <h3><span class="hl-red">Database en infrastructuur</span></h3>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <ul class="list">
-                    <li>MySQL</li>
-                    <li>SQLite</li>
-                    <li>Apache</li>
-                    <li>Azure</li>
-                    <li>Docker</li>
-                  </ul>
+                  <div class="row item-head">
+                    <div class="col hl-white">MySql</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">MS SQL</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Apache</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Azure</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2022-07-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Docker</div>
+                    <div class="col hl-white">1 Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col">
+          <div class="row">
+            <div class="col text">
               <div class="row">
-                <div class="col">
+                <div class="col item-head">
                   <h3><span class="hl-yellow">Overige technieken</span></h3>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col">
-                  <ul class="list">
-                    <li>Linux CLI</li>
-                    <li>Windows CLI</li>
-                    <li>SCRUM</li>
-                    <li>DevOps</li>
-                  </ul>
+                  <div class="row item-head">
+                    <div class="col hl-white">SCRUM</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">DevOps</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2022-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Windows CLI</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2018-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
+
+                  <div class="row item-head">
+                    <div class="col hl-white">Linux CLI</div>
+                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
+                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -623,6 +740,12 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="row only-print">
+    <div class="col center-x">
+      <h3>Bekijk mijn volledige CV op mijn website: https://cv.iwanvanderwal.nl</h3>
     </div>
   </div>
 </section>

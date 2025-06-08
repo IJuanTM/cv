@@ -124,7 +124,15 @@ div.to-top {
 
 // -------------------------------------------------------------------------------------------------------------------------------- //
 
+*.only-print {
+  display: none;
+}
+
 @media print {
+  *.only-print {
+    display: inherit !important;
+  }
+
   *.no-print {
     display: none;
   }
