@@ -2,9 +2,6 @@
 
 namespace app\Controllers;
 
-use DateTimeImmutable;
-use Exception;
-
 /**
  * The ApplicationController class is the base class for all controllers.
  * It contains methods that are used by all controllers. It also contains the autoloader.
@@ -81,28 +78,19 @@ class AppController
     }
 
     /**
-     * Returns the number of full years since $date, with +1 if current date is within
-     * the last 3 months before the next anniversary of $date.
+     * Method for rendering stars.
      *
-     * @param string $date (format: 'YYYY-MM-DD')
+     * @param int $filled
+     * @param int $total
      *
-     * @return int
+     * @return string
      */
-    public static function yearsSince(string $date): int
+    public static function renderStars(int $filled, int $total): string
     {
-        try {
-            $start = new DateTimeImmutable($date);
-            $now = new DateTimeImmutable();
+        $stars = '';
 
-            $years = $start->diff($now)->y;
+        for ($i = 0; $i < $total; $i++) $stars .= $i < $filled ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
 
-            $next = $start->modify('+' . ($years + 1) . ' years');
-
-            if ($now < $next && $now->diff($next)->days <= 92) $years++;
-
-            return $years;
-        } catch (Exception) {
-            return 0;
-        }
+        return $stars;
     }
 }

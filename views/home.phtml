@@ -278,7 +278,7 @@
                   <ul class="list">
                     <li>Het ontwikkelen van een SaaS pensioen administratie systeem voor de klanten van Lumera (AxyWare)</li>
                     <li>Focus op het ontwikkelen van een web-based client voor het systeem met behulp van C# (.NET Core) en webportalen voor deelnemers</li>
-                    <li>Werken met C#, .NET (Framwork en Core), Blazor, HTML, CSS, JavaScript en MS SQL</li>
+                    <li>Werken met C#, .NET (Framework en Core), Blazor, HTML, CSS, JavaScript en MS SQL</li>
                   </ul>
                 </div>
               </div>
@@ -380,7 +380,7 @@
       </div>
     </div>
 
-    <div class="col no-print" id="vaardigheden">
+    <div class="col" id="vaardigheden">
       <div class="row">
         <div class="col">
           <h2>Vaardigheden</h2>
@@ -395,64 +395,93 @@
             <div class="col text">
               <div class="row">
                 <div class="col">
+                  <div class="row">
+                    <div class="col hl-dimmed">Taal/Techniek</div>
+                    <div class="col hl-dimmed">Behendigheid</div>
+                    <div class="col hl-dimmed">Actief sinds*</div>
+                    <div class="col hl-dimmed">Professionele ervaring</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
+                <div class="col">
                   <h3><span class="hl-purple">Programmeertalen</span></h3>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col">
+                <div class="col list">
                   <div class="row">
-                    <div class="col hl-white">HTML</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2017-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">HTML</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2017</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">CSS</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2017-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">CSS</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2017</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">PHP</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2018-07-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">JavaScript</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">1 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">JavaScript</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">Sass</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">-</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">C# (.NET)</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-07-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">PHP</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Sass</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-07-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">Node JS</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Python</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">C# (.NET)</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">1 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Java</div>
-                    <div class="col hl-white">3 Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Python</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">-</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">x86 Assembly</div>
-                    <div class="col hl-white">1 Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Java</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(3, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">-</div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">x86 Assembly</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(1, 5) ?></div>
+                    <div class="col">2023</div>
+                    <div class="col">-</div>
                   </div>
                 </div>
               </div>
@@ -468,47 +497,54 @@
               </div>
 
               <div class="row">
-                <div class="col">
+                <div class="col list">
                   <div class="row">
-                    <div class="col hl-white">Git</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2018-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">Git</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Laravel</div>
-                    <div class="col hl-white">4 Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Laravel</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Blazor</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2022-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Blazor</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2021</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">LINQ</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">LINQ</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Entity Framework</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Entity Framework</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Composer</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2021-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">NPM</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">NPM</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">Composer</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(3, 5) ?></div>
+                    <div class="col">2021</div>
+                    <div class="col">1.5 jaar</div>
                   </div>
                 </div>
               </div>
@@ -524,35 +560,40 @@
               </div>
 
               <div class="row">
-                <div class="col">
+                <div class="col list">
                   <div class="row">
-                    <div class="col hl-white">MySql</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="col">MySql</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(5, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">2 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">MS SQL</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">MS SQL</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">1 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Apache</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Apache</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">1 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Azure</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2022-07-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Azure</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(3, 5) ?></div>
+                    <div class="col">2021</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Docker</div>
-                    <div class="col hl-white">1 Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Docker</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(2, 5) ?></div>
+                    <div class="col">2022</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
                 </div>
               </div>
@@ -568,32 +609,42 @@
               </div>
 
               <div class="row">
-                <div class="col">
+                <div class="col list">
                   <div class="row">
-                    <div class="col hl-white">SCRUM</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2020-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">SCRUM</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2020</div>
+                    <div class="col">1 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">DevOps</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2022-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">DevOps</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2022</div>
+                    <div class="col">0.5 jaar</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Windows CLI</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2018-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Windows CLI</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2018</div>
+                    <div class="col">-</div>
                   </div>
 
                   <div class="row">
-                    <div class="col hl-white">Linux CLI</div>
-                    <div class="col hl-white"><?= AppController::yearsSince('2019-01-01') ?> Jaar</div>
-                    <div class="col hl-yellow"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <div class="col">Linux CLI</div>
+                    <div class="col hl-yellow"><?= AppController::renderStars(4, 5) ?></div>
+                    <div class="col">2019</div>
+                    <div class="col">1 jaar</div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <small class="hl-dimmed">* &quot;Actief sinds&quot; geeft aan vanaf wanneer ik met de taal heb gewerkt, zowel professioneel als in persoonlijke projecten en tijdens studie</small>
             </div>
           </div>
         </div>
